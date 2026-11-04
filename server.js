@@ -308,9 +308,16 @@ class ZeroTTSManager {
   }
 
   resolvePythonBin() {
-    const venvPy = path.join(__dirname, '.venv', 'bin', 'python');
-    if (fs.existsSync(venvPy)) return venvPy;
-    return 'python3';
+    const candidates = [
+      path.join(__dirname, '.venv', 'Scripts', 'python.exe'), // Windows venv
+      path.join(__dirname, '.venv', 'bin', 'python'),        // Linux / macOS venv
+      process.env.PYTHON_PATH,
+    ].filter(Boolean);
+
+    for (const bin of candidates) {
+      if (fs.existsSync(bin)) return bin;
+    }
+    return process.platform === 'win32' ? 'python' : 'python3';
   }
 
   startWorker() {
