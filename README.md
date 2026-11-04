@@ -45,25 +45,52 @@ Người xem trên TikTok Live tương tác trực tiếp qua **Bình luận (Co
 
 ## 🚀 Hướng Dẫn Cài Đặt & Chạy Nhanh
 
-### 1. Yêu cầu hệ thống
-- [Bun.js](https://bun.sh/) (`>= 1.1`)
-- Python `3.10+` & [`uv`](https://github.com/astral-sh/uv) (để tạo môi trường `.venv` chạy `zerotts`)
+### 🐳 Cách 1: Chạy bằng Docker (Khuyên Dùng — Không lo lỗi môi trường)
+Chạy ổn định 100% trên cả Windows, macOS và Linux mà không cần cài Python hay Node/Bun trực tiếp trên máy.
 
-### 2. Cài đặt thư viện
+**Yêu cầu**: Đã cài đặt [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
 ```bash
-# Cài đặt dependencies cho Bun / Node
-bun install
+# 1. Khởi động hệ thống (tự động build & chạy ngầm)
+docker compose up -d --build
 
-# Tạo môi trường Python .venv và cài đặt ZeroTTS
-uv venv .venv
-uv pip install --python .venv/bin/python zerotts pillow
+# 2. Xem logs trạng thái server & AI ZeroTTS
+docker compose logs -f
+
+# 3. Dừng hệ thống khi không dùng
+docker compose down
+```
+> **Dành cho Windows**: Bạn có thể click đúp trực tiếp vào file `start_docker.bat` để tự động khởi động và mở trình duyệt, hoặc `stop_docker.bat` để dừng.
+
+---
+
+### 💻 Cách 2: Cài đặt trực tiếp trên máy (Native)
+
+#### 1. Yêu cầu hệ thống
+- [Node.js](https://nodejs.org/) (`>= 18`) hoặc [Bun.js](https://bun.sh/) (`>= 1.1`)
+- Python `3.10 – 3.12` (trên Windows nhớ tick chọn `Add python.exe to PATH`)
+
+#### 2. Cài đặt thư viện
+```bash
+# Cài đặt dependencies cho Node / Bun
+npm install
+# hoặc nếu dùng Bun:
+# bun install
+
+# Tạo môi trường ảo Python .venv và cài đặt ZeroTTS
+python -m venv .venv
+.venv/bin/pip install --upgrade pip
+.venv/bin/pip install zerotts pillow
+# (Trên Windows dùng: .venv\Scripts\pip install zerotts pillow)
 ```
 
-### 3. Khởi chạy Server
+#### 3. Khởi chạy Server
 ```bash
-bun start
-# Hoặc chế độ tự động reload khi sửa code:
-bun run dev
+npm start
+# hoặc dùng Node:
+node server.js
+# hoặc dùng Bun:
+# bun start
 ```
 
 Mặc định server chạy tại cổng `3000`:

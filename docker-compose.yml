@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  temple-live:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tiktok-live-temple
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - PYTHON_PATH=/app/.venv/bin/python
+      - HF_HOME=/app/data/.hf_cache
+      - OMP_NUM_THREADS=4
+      - OMP_WAIT_POLICY=PASSIVE
+    volumes:
+      # Giữ trạng thái bảng vàng công đức, lịch sử và cache TTS
+      - ./data:/app/data
+      # Mount thư mục models offline nếu có
+      - ./models:/app/models
