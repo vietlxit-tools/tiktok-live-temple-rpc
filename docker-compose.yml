@@ -21,3 +21,4 @@ services:
       - ./data:/app/data
       # Mount thư mục models offline nếu có
       - ./models:/app/models
+

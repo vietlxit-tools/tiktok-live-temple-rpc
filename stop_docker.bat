@@ -10,3 +10,4 @@ docker compose down
 echo.
 echo Đã dừng và giải phóng tài nguyên hoàn tất.
 pause
+
