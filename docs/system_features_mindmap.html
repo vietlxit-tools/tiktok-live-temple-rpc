@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo Cáo Chức Năng Người Dùng — Chùa Linh Ứng TikTok Live</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #fafbff;
+      color: #0f172a;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .title-area h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1e1b4b;
+    }
+
+    .tag {
+      background: #f3e8ff;
+      color: #7e22ce;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #334155;
+    }
+
+    .btn.primary {
+      background: #7c3aed;
+      border-color: #6d28d9;
+      color: #ffffff;
+    }
+
+    #canvas-container {
+      flex: 1;
+      overflow: auto;
+      cursor: grab;
+      position: relative;
+    }
+
+    .svg-wrapper {
+      display: inline-block;
+      padding: 40px;
+      min-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="title-area">
+      <h1>📊 Sơ Đồ Chức Năng Người Dùng (Báo Cáo Ban Giám Đốc / CEO)</h1>
+      <span class="tag">Chùa Linh Ứng TikTok Live</span>
+    </div>
+    <div class="controls">
+      <button class="btn" onclick="zoomIn()">🔍 Phóng To (+)</button>
+      <button class="btn" onclick="zoomOut()">🔎 Thu Nhỏ (-)</button>
+      <button class="btn" onclick="resetZoom()">↺ Reset</button>
+      <a class="btn primary" href="system_features_mindmap.svg" download="bao_cao_chuc_nang_ceo.svg">📥 Tải File SVG</a>
+    </div>
+  </header>
+  <div id="canvas-container">
+    <div class="svg-wrapper" id="svgWrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1860 1500" width="1860" height="1500">
+        <defs>
+          <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#e6edf5" stroke-width="1" />
+          </pattern>
+          <filter id="drop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#7c3aed" flood-opacity="0.12" />
+          </filter>
+        </defs>
+
+        <rect width="100%" height="100%" fill="#fafbff" />
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <path d="M 340 750.0 C 385.0 750.0, 395.0 212.66666666666666, 440 212.66666666666666" fill="none"
+          stroke="#a855f7" stroke-width="2.6" stroke-linecap="round" />
+        <g class="branch-level-1">
+          <text x="440" y="202.66666666666666" font-family="system-ui, -apple-system, sans-serif" font-size="16"
+            font-weight="700" fill="#0f172a">1. Nghi Lễ Tâm Linh Tương Tác (Live Rituals)</text>
+        </g>
+        <line x1="440" y1="212.66666666666666" x2="770" y2="212.66666666666666" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <path d="M 770 212.66666666666666 C 819.5 212.66666666666666, 830.5 98.0, 880 98.0" fill="none" stroke="#a855f7"
+          stroke-width="2.2" stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="90.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Nghi lễ bái Phật &amp; Cầu an</text>
+        </g>
+        <line x1="880" y1="98.0" x2="1100" y2="98.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 98.0 C 1140.0 98.0, 1140.0 60, 1180 60" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="60" x2="1210" y2="60" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="64.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Thắp hương &amp; Đảnh lễ Tam Bái (Phật tử bước lên quỳ lạy 3 lạy trước Phật)</text>
+        </g>
+        <path d="M 1100 98.0 C 1140.0 98.0, 1140.0 98, 1180 98" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="98" x2="1210" y2="98" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="102.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Thả Đèn Hoa Đăng chở lời nguyện ước bay lên trời</text>
+        </g>
+        <path d="M 1100 98.0 C 1140.0 98.0, 1140.0 136, 1180 136" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="136" x2="1210" y2="136" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="140.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Thỉnh Đại Hồng Chung ngân vang sóng âm vàng lan tỏa Chánh Điện</text>
+        </g>
+        <path d="M 770 212.66666666666666 C 819.5 212.66666666666666, 830.5 219.0, 880 219.0" fill="none"
+          stroke="#a855f7" stroke-width="2.2" stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="211.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Xin xăm &amp; Gieo quẻ đầu năm</text>
+        </g>
+        <line x1="880" y1="219.0" x2="1100" y2="219.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 219.0 C 1140.0 219.0, 1140.0 200, 1180 200" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="200" x2="1210" y2="200" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="204.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Lắc ống xăm gieo 18 quẻ Linh Xăm (Tài lộc, Công danh, Gia đạo, Bình an)</text>
+        </g>
+        <path d="M 1100 219.0 C 1140.0 219.0, 1140.0 238, 1180 238" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="238" x2="1210" y2="238" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="242.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Tự động mở tờ Giải Quẻ chi tiết bài thơ và lời bình cát hung</text>
+        </g>
+        <path d="M 770 212.66666666666666 C 819.5 212.66666666666666, 830.5 321.0, 880 321.0" fill="none"
+          stroke="#a855f7" stroke-width="2.2" stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="313.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Tụng kinh &amp; Tích phước</text>
+        </g>
+        <line x1="880" y1="321.0" x2="1100" y2="321.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 321.0 C 1140.0 321.0, 1140.0 302, 1180 302" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="302" x2="1210" y2="302" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="306.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Thả tim gõ mõ gỗ tụng kinh theo nhịp thời gian thực</text>
+        </g>
+        <path d="M 1100 321.0 C 1140.0 321.0, 1140.0 340, 1180 340" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="340" x2="1210" y2="340" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="344.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Làn sóng 40+ Phật tử trong Chánh Điện đồng loạt vái lạy</text>
+        </g>
+        <path d="M 340 750.0 C 385.0 750.0, 395.0 524.0, 440 524.0" fill="none" stroke="#a855f7" stroke-width="2.6"
+          stroke-linecap="round" />
+        <g class="branch-level-1">
+          <text x="440" y="514.0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700"
+            fill="#0f172a">2. Tương Tác Giọng Nói AI (Personalized Voice)</text>
+        </g>
+        <line x1="440" y1="524.0" x2="770" y2="524.0" stroke="#a855f7" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M 770 524.0 C 819.5 524.0, 830.5 473.0, 880 473.0" fill="none" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="465.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Xướng tên &amp; Lời cầu nguyện</text>
+        </g>
+        <line x1="880" y1="473.0" x2="1100" y2="473.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 473.0 C 1140.0 473.0, 1140.0 454, 1180 454" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="454" x2="1210" y2="454" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="458.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Tự động xướng tên người xem kèm lời khấn cho cả phòng live cùng nghe</text>
+        </g>
+        <path d="M 1100 473.0 C 1140.0 473.0, 1140.0 492, 1180 492" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="492" x2="1210" y2="492" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="496.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Đọc to sớ cầu an khi người xem thả đèn hoa đăng</text>
+        </g>
+        <path d="M 770 524.0 C 819.5 524.0, 830.5 575.0, 880 575.0" fill="none" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="567.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Đọc giải quẻ &amp; Lời cảm tạ</text>
+        </g>
+        <line x1="880" y1="575.0" x2="1100" y2="575.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 575.0 C 1140.0 575.0, 1140.0 556, 1180 556" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="556" x2="1210" y2="556" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="560.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Đọc diễn cảm bài thơ giải quẻ bằng giọng đọc AI truyền cảm</text>
+        </g>
+        <path d="M 1100 575.0 C 1140.0 575.0, 1140.0 594, 1180 594" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="594" x2="1210" y2="594" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="598.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Phát lời tri ân chúc phúc công đức khi người xem cúng dường</text>
+        </g>
+        <path d="M 340 750.0 C 385.0 750.0, 395.0 778.0, 440 778.0" fill="none" stroke="#a855f7" stroke-width="2.6"
+          stroke-linecap="round" />
+        <g class="branch-level-1">
+          <text x="440" y="768.0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700"
+            fill="#0f172a">3. Cúng Dường &amp; Đại Lễ Đặc Quyền (Gifting)</text>
+        </g>
+        <line x1="440" y1="778.0" x2="770" y2="778.0" stroke="#a855f7" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M 770 778.0 C 819.5 778.0, 830.5 727.0, 880 727.0" fill="none" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="719.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Dâng lễ vật Tam Bảo</text>
+        </g>
+        <line x1="880" y1="727.0" x2="1100" y2="727.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 727.0 C 1140.0 727.0, 1140.0 708, 1180 708" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="708" x2="1210" y2="708" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="712.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Dâng Đài Sen Vàng, Mâm Ngũ Quả Cát Tường, Đèn Lưu Ly Trí Tuệ</text>
+        </g>
+        <path d="M 1100 727.0 C 1140.0 727.0, 1140.0 746, 1180 746" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="746" x2="1210" y2="746" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="750.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Tự động thắp thêm hương thơm và thỉnh chuông khi dâng lễ</text>
+        </g>
+        <path d="M 770 778.0 C 819.5 778.0, 830.5 829.0, 880 829.0" fill="none" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="821.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Đại Lễ Kim Long Chầu Phật</text>
+        </g>
+        <line x1="880" y1="829.0" x2="1100" y2="829.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 829.0 C 1140.0 829.0, 1140.0 810, 1180 810" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="810" x2="1210" y2="810" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="814.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Kích hoạt Đại Lễ khi người xem tặng quà lớn (từ 100 xu trở lên)</text>
+        </g>
+        <path d="M 1100 829.0 C 1140.0 829.0, 1140.0 848, 1180 848" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="848" x2="1210" y2="848" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="852.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Hiệu ứng Rồng Vàng bay lượn, mưa hoa sen vàng và hào quang rực rỡ</text>
+        </g>
+        <path d="M 340 750.0 C 385.0 750.0, 395.0 1032.0, 440 1032.0" fill="none" stroke="#a855f7" stroke-width="2.6"
+          stroke-linecap="round" />
+        <g class="branch-level-1">
+          <text x="440" y="1022.0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700"
+            fill="#0f172a">4. Vinh Danh &amp; Xếp Hạng Bảng Vàng (Gamification)</text>
+        </g>
+        <line x1="440" y1="1032.0" x2="770" y2="1032.0" stroke="#a855f7" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M 770 1032.0 C 819.5 1032.0, 830.5 981.0, 880 981.0" fill="none" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="973.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Tích lũy điểm công đức</text>
+        </g>
+        <line x1="880" y1="981.0" x2="1100" y2="981.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 981.0 C 1140.0 981.0, 1140.0 962, 1180 962" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="962" x2="1210" y2="962" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="966.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="400"
+            fill="#334155">Quy đổi tự động từ mọi hành động: Thả tim (+1), Bình luận (+10-15), Quà tặng
+            (+20-50/xu)</text>
+        </g>
+        <path d="M 1100 981.0 C 1140.0 981.0, 1140.0 1000, 1180 1000" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="1000" x2="1210" y2="1000" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="1004.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5"
+            font-weight="400" fill="#334155">Ghi nhận và tích lũy điểm bền vững xuyên suốt các phiên livestream</text>
+        </g>
+        <path d="M 770 1032.0 C 819.5 1032.0, 830.5 1083.0, 880 1083.0" fill="none" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="1075.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Đặc quyền vinh danh người xem</text>
+        </g>
+        <line x1="880" y1="1083.0" x2="1100" y2="1083.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 1083.0 C 1140.0 1083.0, 1140.0 1064, 1180 1064" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="1064" x2="1210" y2="1064" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="1068.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5"
+            font-weight="400" fill="#334155">Vinh danh trực tiếp Avatar &amp; Tên lên 6 Đệm Quỳ VIP trước bàn thờ
+            Phật</text>
+        </g>
+        <path d="M 1100 1083.0 C 1140.0 1083.0, 1140.0 1102, 1180 1102" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="1102" x2="1210" y2="1102" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="1106.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5"
+            font-weight="400" fill="#334155">Bảng Vàng TOP CÔNG ĐỨC vinh danh Top người xem có công đức cao nhất</text>
+        </g>
+        <path d="M 340 750.0 C 385.0 750.0, 395.0 1286.0, 440 1286.0" fill="none" stroke="#a855f7" stroke-width="2.6"
+          stroke-linecap="round" />
+        <g class="branch-level-1">
+          <text x="440" y="1276.0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700"
+            fill="#0f172a">5. Quản Trị &amp; Vận Hành Phòng Live (Host Tools)</text>
+        </g>
+        <line x1="440" y1="1286.0" x2="770" y2="1286.0" stroke="#a855f7" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M 770 1286.0 C 819.5 1286.0, 830.5 1235.0, 880 1235.0" fill="none" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="1227.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Kết nối &amp; Trợ lực livestream</text>
+        </g>
+        <line x1="880" y1="1235.0" x2="1100" y2="1235.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 1235.0 C 1140.0 1235.0, 1140.0 1216, 1180 1216" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="1216" x2="1210" y2="1216" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="1220.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5"
+            font-weight="400" fill="#334155">Kết nối 1 chạm tới phòng TikTok Live chỉ bằng @username</text>
+        </g>
+        <path d="M 1100 1235.0 C 1140.0 1235.0, 1140.0 1254, 1180 1254" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="1254" x2="1210" y2="1254" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="1258.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5"
+            font-weight="400" fill="#334155">Bảng điều khiển nhanh các nghi thức hỗ trợ tương tác với khán giả</text>
+        </g>
+        <path d="M 770 1286.0 C 819.5 1286.0, 830.5 1337.0, 880 1337.0" fill="none" stroke="#a855f7" stroke-width="2.2"
+          stroke-linecap="round" />
+        <g class="branch-level-2">
+          <text x="880" y="1329.0" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700"
+            fill="#0f172a">Tùy biến không gian</text>
+        </g>
+        <line x1="880" y1="1337.0" x2="1100" y2="1337.0" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+        <path d="M 1100 1337.0 C 1140.0 1337.0, 1140.0 1318, 1180 1318" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="1318" x2="1210" y2="1318" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="1322.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5"
+            font-weight="400" fill="#334155">Tùy chọn giọng đọc AI và điều chỉnh âm lượng giọng nói / nhạc tụng
+            kinh</text>
+        </g>
+        <path d="M 1100 1337.0 C 1140.0 1337.0, 1140.0 1356, 1180 1356" fill="none" stroke="#a855f7" stroke-width="1.6"
+          stroke-linecap="round" />
+        <line x1="1180" y1="1356" x2="1210" y2="1356" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" />
+        <g class="branch-level-3">
+          <text x="1220" y="1360.5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5"
+            font-weight="400" fill="#334155">Nút đặt lại thống kê điểm công đức cho từng phiên live mới</text>
+        </g>
+
+
+        <g class="root-node" filter="url(#drop-shadow)">
+          <rect x="60" y="718.0" width="280" height="64" rx="32.0" ry="32.0" fill="#ffffff" stroke="#8b5cf6"
+            stroke-width="3" />
+          <text x="200.0" y="756.0" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800"
+            fill="#0f172a" text-anchor="middle">Chùa Linh Ứng TikTok Live</text>
+        </g>
+
+      </svg>
+
+    </div>
+  </div>
+  <script>
+    let scale = 1.0;
+    const wrapper = document.getElementById('svgWrapper');
+    function zoomIn() { scale = Math.min(2.5, scale + 0.15); wrapper.style.transform = `scale(${scale})`; wrapper.style.transformOrigin = 'top left'; }
+    function zoomOut() { scale = Math.max(0.4, scale - 0.15); wrapper.style.transform = `scale(${scale})`; wrapper.style.transformOrigin = 'top left'; }
+    function resetZoom() { scale = 1.0; wrapper.style.transform = 'scale(1)'; }
+  </script>
+</body>
+
+</html>

@@ -16,11 +16,11 @@ import traceback
 import unicodedata
 from pathlib import Path
 
-os.environ.setdefault("OMP_NUM_THREADS", "3")
+os.environ.setdefault("OMP_NUM_THREADS", "4")
 os.environ.setdefault("OMP_WAIT_POLICY", "PASSIVE")
-os.environ.setdefault("MKL_NUM_THREADS", "3")
-os.environ.setdefault("OPENBLAS_NUM_THREADS", "3")
-os.environ.setdefault("VECLIB_MAXIMUM_THREADS", "3")
+os.environ.setdefault("MKL_NUM_THREADS", "4")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "4")
+os.environ.setdefault("VECLIB_MAXIMUM_THREADS", "4")
 
 import numpy as np
 from zerotts import ZeroTTS, normalize_vi_text
@@ -31,6 +31,7 @@ CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 LOCAL_MODEL_CANDIDATES = [
     os.environ.get("ZEROTTS_MODEL_PATH", ""),
+    str(Path(__file__).resolve().parent / "models" / "zerotts"),
     "/Users/zens/Work/UIT/Projects/f1-metrics-explainer/models/zerotts",
 ]
 
@@ -118,7 +119,7 @@ def main() -> None:
     emit({"type": "status", "status": "loading", "model": model_src})
 
     try:
-        tts = ZeroTTS.from_pretrained(model_src, intra_op_num_threads=3)
+        tts = ZeroTTS.from_pretrained(model_src, intra_op_num_threads=4)
         voices = tts.list_voices()
         default_voice = "maichi" if "maichi" in voices else (voices[0] if voices else None)
         load_sec = round(time.time() - t0, 2)
@@ -181,9 +182,12 @@ def main() -> None:
                 continue
 
             clean_audio = polish_waveform(raw_wav, int(tts.sample_rate))
+            del raw_wav  # Giải phóng tensor trung gian ngay — reference count → 0
+
             tts.save_audio(clean_audio, str(out_path))
             synth_sec = round(time.time() - t_synth, 2)
             duration_sec = round(clean_audio.shape[-1] / float(tts.sample_rate), 2)
+            del clean_audio  # Giải phóng mảng audio sau khi đã ghi xong file
 
             emit({
                 "type": "result",
