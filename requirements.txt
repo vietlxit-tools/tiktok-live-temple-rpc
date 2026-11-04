@@ -1,0 +1,24 @@
+# ============================================================================
+# Chùa Linh Ứng Online — TikTok Live RPC (Python Requirements)
+# Dành cho tiến trình xử lý giọng đọc AI ZeroTTS Worker (tts_worker.py)
+# Khuyến nghị: Python 3.10 - 3.12
+# Cài đặt: pip install -r requirements.txt
+# ============================================================================
+
+# Core Vietnamese AI Text-To-Speech Engine
+zerotts>=0.1.5
+
+# Thư viện xử lý hình ảnh & đồ họa phụ trợ
+pillow>=10.0.0
+
+# Xử lý mảng số học & chuẩn hóa âm thanh (tts_worker.py)
+numpy>=1.23.0
+scipy>=1.10.0
+soundfile>=0.12.1
+sounddevice>=0.5.2
+
+# ONNX Runtime & Mô hình Hugging Face
+onnxruntime>=1.17.0
+tokenizers>=0.20.0
+huggingface_hub>=0.23.0
+
