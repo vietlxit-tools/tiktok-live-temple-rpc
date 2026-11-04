@@ -19,10 +19,17 @@
     if (!stageWrapper || !stage9x16) return;
     const rect = stageWrapper.getBoundingClientRect();
     const scale = Math.min(rect.width / 1080, rect.height / 1920);
-    stage9x16.style.transform = `scale(${scale})`;
+    if (scale > 0 && !isNaN(scale)) {
+      stage9x16.style.transform = `scale(${scale})`;
+    }
   }
   window.addEventListener('resize', fitStage);
+  window.addEventListener('DOMContentLoaded', fitStage);
+  window.addEventListener('load', fitStage);
   fitStage();
+  requestAnimationFrame(fitStage);
+  setTimeout(fitStage, 100);
+  setTimeout(fitStage, 500);
 
   // 2. Khởi tạo Particle Engine & Audio Engine (ZeroTTS Mai Chi)
   const canvas = document.getElementById('templeCanvas');

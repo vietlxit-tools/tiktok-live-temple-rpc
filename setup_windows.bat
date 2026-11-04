@@ -65,3 +65,4 @@ echo   ✅ CÀI ĐẶT HOÀN TẤT THÀNH CÔNG!
 echo   Bây giờ bạn có thể chạy file "start_windows.bat" để bắt đầu.
 echo ====================================================================
 pause
+

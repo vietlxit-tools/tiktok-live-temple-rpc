@@ -79,7 +79,7 @@ body.obs-mode .stage-wrapper {
   height: 1920px;
   transform-origin: top left;
   overflow: hidden;
-  background: #120403;
+  background: #120403 url('/assets/amitabha_stage.jpg') no-repeat center top / cover;
   contain: strict;
 }
 
@@ -93,6 +93,7 @@ body.obs-mode .stage-wrapper {
   object-position: center top;
   z-index: 1;
   pointer-events: none;
+  background: transparent url('/assets/amitabha_stage.jpg') no-repeat center top / cover;
 }
 
 /* 1B. HỆ THỐNG HÀO QUANG ĐỨC PHẬT A DI ĐÀ — TỐI ƯU HÓA CPU (KHÔNG DÙNG FILTER:BLUR) */

@@ -21,8 +21,14 @@
          ==================================================================== -->
     <div class="stage-wrapper" id="stageWrapper">
       <div class="stage-9x16" id="stage9x16">
-        <!-- 1. HÌNH NỀN CHÁNH ĐIỆN ĐỨC PHẬT A DI ĐÀ 8K SẮC NÉT (TỐI ƯU JPG NHẸ GẤP 7 LẦN) -->
-        <img src="/assets/amitabha_stage.jpg" alt="Đức Phật A Di Đà Chánh Điện" class="sanctuary-bg-img" fetchpriority="high" decoding="async" />
+        <!-- 1. HÌNH NỀN CHÁNH ĐIỆN ĐỨC PHẬT A DI ĐÀ (HỖ TRỢ FALLBACK ĐA TẦNG: JPG -> PNG -> TEMPLE_STAGE_BG) -->
+        <img
+          src="/assets/amitabha_stage.jpg"
+          onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = '/assets/amitabha_stage.png'; } else if (this.dataset.fallback === '1') { this.dataset.fallback = '2'; this.src = '/assets/temple_stage_bg.png'; }"
+          alt="Đức Phật A Di Đà Chánh Điện"
+          class="sanctuary-bg-img"
+          fetchpriority="high"
+        />
 
         <!-- 1B. HỆ THỐNG HÀO QUANG ĐỨC PHẬT A DI ĐÀ (XOAY CHUYỂN VẠN TRƯỢNG, KHÔNG CHE MẶT PHẬT) -->
         <div class="buddha-halo-system" id="buddhaHaloSystem">
