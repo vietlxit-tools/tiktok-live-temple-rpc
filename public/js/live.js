@@ -15,13 +15,27 @@
   const stageWrapper = document.getElementById('stageWrapper');
   const stage9x16 = document.getElementById('stage9x16');
 
+  let fitStageRaf = null;
   function fitStage() {
     if (!stageWrapper || !stage9x16) return;
-    const rect = stageWrapper.getBoundingClientRect();
-    const scale = Math.min(rect.width / 1080, rect.height / 1920);
-    stage9x16.style.transform = `scale(${scale})`;
+    if (fitStageRaf) return;
+    fitStageRaf = requestAnimationFrame(() => {
+      fitStageRaf = null;
+      const w = stageWrapper.clientWidth;
+      const h = stageWrapper.clientHeight;
+      if (w > 0 && h > 0) {
+        const scale = Math.min(w / 1080, h / 1920);
+        stage9x16.style.transform = `translate3d(0, 0, 0) scale(${scale})`;
+      }
+    });
   }
-  window.addEventListener('resize', fitStage);
+
+  if (typeof ResizeObserver !== 'undefined' && stageWrapper) {
+    const stageObserver = new ResizeObserver(fitStage);
+    stageObserver.observe(stageWrapper);
+  } else {
+    window.addEventListener('resize', fitStage, { passive: true });
+  }
   fitStage();
 
   // 2. Khởi tạo Particle Engine & Audio Engine (ZeroTTS Mai Chi)
@@ -161,11 +175,11 @@
       const progress = r / (rows - 1); // 0 (xa nhất, gần bục gỗ) -> 1 (gần nhất ở phía sau Chánh Điện)
       // Đường cong phối cảnh 3D tự nhiên: các hàng gần camera dãn nhẹ theo chiều sâu
       const y = Math.round(1255 + (progress * 0.88 + Math.pow(progress, 2) * 0.12) * 610);
-      const scale = +(0.68 + progress * 0.38).toFixed(2); // 0.68 -> 1.06
+      const scale = +(0.74 + progress * 0.36).toFixed(2); // 0.74 -> 1.10 (tăng kích thước hài hoà, rõ nét trên điện thoại)
 
-      // Cánh trái thảm đỏ (mở rộng theo chiều sâu phối cảnh điện thờ)
-      const leftInnerX = Math.round(330 - progress * 45); // 330px -> 285px
-      const leftOuterX = Math.round(48 - progress * 24);  // 48px -> 24px
+      // Cánh trái thảm đỏ: đưa mép ngoài vào trong an toàn, thu hẹp khoảng cách lối đi giữa
+      const leftInnerX = Math.round(375 - progress * 20); // 375px -> 355px
+      const leftOuterX = Math.round(75 + progress * 20);  // 75px -> 95px
       for (let c = 0; c < colsPerSide; c++) {
         const t = c / (colsPerSide - 1);
         const x = Math.round(leftOuterX + t * (leftInnerX - leftOuterX));
@@ -173,8 +187,8 @@
       }
 
       // Cánh phải thảm đỏ
-      const rightInnerX = Math.round(750 + progress * 45); // 750px -> 795px
-      const rightOuterX = Math.round(1032 + progress * 24); // 1032px -> 1056px
+      const rightInnerX = Math.round(705 + progress * 20); // 705px -> 725px
+      const rightOuterX = Math.round(1005 - progress * 20); // 1005px -> 985px
       for (let c = 0; c < colsPerSide; c++) {
         const t = c / (colsPerSide - 1);
         const x = Math.round(rightInnerX + t * (rightOuterX - rightInnerX));
@@ -182,6 +196,15 @@
       }
     }
   })();
+
+  // Danh sách 24 ghế sát thảm đỏ (Cột 3 bên L, Cột 0 bên R) — precomputed để không query DOM
+  const AISLE_SEAT_INDICES = HALL_SEAT_COORDS
+    .map((s, idx) => ({ ...s, idx }))
+    .filter(s => (s.side === 'L' && s.col === 3) || (s.side === 'R' && s.col === 0))
+    .map(s => s.idx);
+
+  const hallSeatElements = new Array(HALL_SEAT_COORDS.length);
+  const hallSeatSignatures = new Array(HALL_SEAT_COORDS.length).fill('');
 
   // Danh sách 96 nhân vật mặc định của Đạo Tràng Chùa Online
   const SIM_DEVOTEES_96 = [
@@ -357,8 +380,30 @@
     return chosenIdx;
   }
 
+  function initCongregationHallOnce() {
+    if (!congregationHall) return;
+    if (congregationHall.children.length === HALL_SEAT_COORDS.length) return;
+    congregationHall.innerHTML = '';
+    const frag = document.createDocumentFragment();
+    HALL_SEAT_COORDS.forEach((seat, idx) => {
+      const el = document.createElement('div');
+      el.className = 'hall-seat empty-seat';
+      el.dataset.seatIdx = idx;
+      el.style.left = `${seat.x}px`;
+      el.style.top = `${seat.y}px`;
+      el.style.zIndex = 15 + seat.row * 2;
+      el.style.transform = `translate(-50%, -100%) scale(${seat.scale})`;
+      el.innerHTML = '<div class="cushion-mat empty-cushion"></div>';
+      frag.appendChild(el);
+      hallSeatElements[idx] = el;
+      hallSeatSignatures[idx] = 'empty';
+    });
+    congregationHall.appendChild(frag);
+  }
+
   function renderCongregationHall(leaderboard = [], force = false) {
     if (!congregationHall) return;
+    initCongregationHallOnce();
 
     const now = Date.now();
 
@@ -396,10 +441,6 @@
       }
     });
 
-    const sig = `${realUserCount}:${isCrowded}:${Array.from(seatUserMap.entries()).map(([i, v]) => `${i}_${v.user}`).join(',')}`;
-    if (!force && sig === lastRenderSig && congregationHall.children.length > 0) return;
-    lastRenderSig = sig;
-
     // Dọn dẹp bộ nhớ định kỳ tránh rò rỉ RAM khi live nhiều tiếng liên tục
     if (viewerMetaMap.size > 150) {
       viewerMetaMap.forEach((_, k) => {
@@ -412,15 +453,42 @@
       });
     }
 
-    congregationHall.innerHTML = HALL_SEAT_COORDS.map((seat, idx) => {
+    // TỐI ƯU HÓA: Cập nhật từng ghế độc lập (In-Place Granular Patching)
+    // Chỉ cập nhật đúng ghế thay đổi trạng thái, 95 ghế còn lại hoàn toàn không bị chạm vào DOM
+    for (let idx = 0; idx < HALL_SEAT_COORDS.length; idx++) {
       const realUser = seatUserMap.get(idx);
-      const isFirstTwoRows = seat.row < 2;
+      const isFirstTwoRows = HALL_SEAT_COORDS[idx].row < 2;
       const defaultDevotee = isFirstTwoRows && !isCrowded ? frontRowDevoteesMap.get(idx) : null;
 
-      let devoteeContent = '';
+      const isOccupied = Boolean(realUser || defaultDevotee);
+      const devoteeKey = realUser
+        ? (realUser.uniqueId || realUser.user || '').toLowerCase()
+        : (defaultDevotee ? (defaultDevotee.uniqueId || defaultDevotee.user || '').toLowerCase() : '');
+      const devoteeName = realUser ? realUser.user : (defaultDevotee ? defaultDevotee.user : '');
+      const isDevoteeAtAltar = Boolean(
+        (activeAltarSeatType === 'hall' &&
+          (activeAltarSeatIdx === idx ||
+            (activeAltarUserKey &&
+              (devoteeKey === activeAltarUserKey || devoteeName.toLowerCase() === activeAltarUserKey)))) ||
+        activeDevoteeKeys.has(devoteeKey) ||
+        activeDevoteeKeys.has(devoteeName.toLowerCase())
+      );
 
+      const seatSig = `${realUser ? (realUser.uniqueId || realUser.user) + '_' + (realUser.avatar || '') : (defaultDevotee ? defaultDevotee.user : 'empty')}:${isOccupied}:${isDevoteeAtAltar}`;
+      if (!force && hallSeatSignatures[idx] === seatSig) {
+        continue;
+      }
+      hallSeatSignatures[idx] = seatSig;
+
+      const seatEl = hallSeatElements[idx] || congregationHall.querySelector(`[data-seat-idx="${idx}"]`);
+      if (!seatEl) continue;
+
+      seatEl.className = `hall-seat ${isOccupied ? 'occupied-seat' : 'empty-seat'} ${isDevoteeAtAltar ? 'devotee-at-altar' : ''}`;
+      seatEl.dataset.userKey = devoteeKey;
+      seatEl.dataset.userName = devoteeName;
+
+      let devoteeContent = '';
       if (realUser) {
-        // User thật đang ngồi tại ghế này — LUÔN HIỂN THỊ cho đến khi rời phòng
         const avatarHtml = realUser.avatar
           ? `<img src="${escapeHtml(realUser.avatar)}" alt="" />`
           : escapeHtml(String(realUser.user || 'P').charAt(0).toUpperCase());
@@ -439,7 +507,6 @@
           />
         `;
       } else if (defaultDevotee) {
-        // MẶC ĐỊNH BAN ĐẦU CHỈ CÓ 2 HÀNG ĐẦU CÓ PHẬT TỬ
         const avatarHtml = defaultDevotee.avatar
           ? `<img src="${escapeHtml(defaultDevotee.avatar)}" alt="" />`
           : escapeHtml(String(defaultDevotee.user || 'P').charAt(0).toUpperCase());
@@ -458,43 +525,18 @@
           />
         `;
       } else {
-        // CÁC HÀNG PHÍA SAU (row 2 -> row 11): ĐỆM TRỐNG ĐÓN USER THẬT BƯỚC VÀO
         devoteeContent = `
           <div class="cushion-mat empty-cushion"></div>
         `;
       }
 
-      const isOccupied = Boolean(realUser || defaultDevotee);
-      const devoteeKey = realUser
-        ? (realUser.uniqueId || realUser.user || '').toLowerCase()
-        : (defaultDevotee ? (defaultDevotee.uniqueId || defaultDevotee.user || '').toLowerCase() : '');
-      const devoteeName = realUser ? realUser.user : (defaultDevotee ? defaultDevotee.user : '');
-      const isDevoteeAtAltar = Boolean(
-        (activeAltarSeatType === 'hall' &&
-          (activeAltarSeatIdx === idx ||
-            (activeAltarUserKey &&
-              (devoteeKey === activeAltarUserKey || devoteeName.toLowerCase() === activeAltarUserKey)))) ||
-        activeDevoteeKeys.has(devoteeKey) ||
-        activeDevoteeKeys.has(devoteeName.toLowerCase())
-      );
-
-      return `
-        <div
-          class="hall-seat ${isOccupied ? 'occupied-seat' : 'empty-seat'} ${isDevoteeAtAltar ? 'devotee-at-altar' : ''}"
-          data-seat-idx="${idx}"
-          data-user-key="${escapeHtml(devoteeKey)}"
-          data-user-name="${escapeHtml(devoteeName)}"
-          style="left: ${seat.x}px; top: ${seat.y}px; z-index: ${15 + seat.row * 2}; transform: translate(-50%, -100%) scale(${seat.scale});"
-        >
-          ${devoteeContent}
-        </div>
-      `;
-    }).join('');
+      seatEl.innerHTML = devoteeContent;
+    }
   }
   renderCongregationHall();
 
   let renderHallPending = false;
-  function scheduleRenderCongregationHall(force = true) {
+  function scheduleRenderCongregationHall(force = false) {
     if (renderHallPending) return;
     renderHallPending = true;
     requestAnimationFrame(() => {
@@ -773,34 +815,41 @@
       const delay = (i % 6) * 70;
       setTimeout(() => {
         el.classList.remove('grand-rejoice');
-        void el.offsetWidth;
-        el.classList.add('grand-rejoice');
-        spawnCuteDevoteeBubble(el, ['🪷', '🌸', '✨', '💖', bannerEmoji][i % 5]);
-        setTimeout(() => el.classList.remove('grand-rejoice'), 1850);
+        requestAnimationFrame(() => {
+          el.classList.add('grand-rejoice');
+          spawnCuteDevoteeBubble(el, ['🪷', '🌸', '✨', '💖', bannerEmoji][i % 5]);
+          setTimeout(() => el.classList.remove('grand-rejoice'), 1850);
+        });
       }, delay);
     });
   }
 
-  // Chào đón khi có người mới bước vào sảnh
+  // Chào đón khi có người mới bước vào sảnh — Tối ưu hóa: 0 Forced Reflow + Coalescing Buffer
+  let lastAisleGreetingTime = 0;
   function triggerAisleDevoteesGreeting() {
-    const aisleSeats = document.querySelectorAll('.hall-seat.occupied-seat');
+    const now = Date.now();
+    // Coalesce: Nếu vừa có đợt chào đón trong 400ms, để các Phật tử chào xong, không restart ngắt quãng
+    if (now - lastAisleGreetingTime < 400) return;
+    lastAisleGreetingTime = now;
+
     let greeted = 0;
-    aisleSeats.forEach((el) => {
-      const seatIdx = Number(el.dataset.seatIdx);
+    for (const seatIdx of AISLE_SEAT_INDICES) {
+      const el = hallSeatElements[seatIdx] || congregationHall?.querySelector(`[data-seat-idx="${seatIdx}"]`);
+      if (!el || !el.classList.contains('occupied-seat')) continue;
       const seatInfo = HALL_SEAT_COORDS[seatIdx];
-      if (!seatInfo) return;
-      // Ghế sát thảm đỏ: bên L cột 3, bên R cột 0
-      const isNearCarpet = (seatInfo.side === 'L' && seatInfo.col === 3) || (seatInfo.side === 'R' && seatInfo.col === 0);
-      if (isNearCarpet && greeted < 6 && Math.random() < 0.75) {
+      if (!seatInfo) continue;
+
+      if (greeted < 6 && Math.random() < 0.75) {
         greeted++;
         const dir = seatInfo.side === 'L' ? 'cute-whisper-right' : 'cute-whisper-left';
         el.classList.remove('cute-nod', 'cute-whisper-left', 'cute-whisper-right');
-        void el.offsetWidth;
-        el.classList.add(dir);
-        spawnCuteDevoteeBubble(el, '👋');
-        setTimeout(() => el.classList.remove(dir), 2100);
+        requestAnimationFrame(() => {
+          el.classList.add(dir);
+          spawnCuteDevoteeBubble(el, '👋');
+          setTimeout(() => el.classList.remove(dir), 2100);
+        });
       }
-    });
+    }
   }
 
   // 5.3. Khi có người dùng comment: tìm đúng Phật tử đó và kích hoạt cúi lạy + hiện bong bóng bình luận
@@ -1111,7 +1160,7 @@
     const seatCoord = HALL_SEAT_COORDS[seatIdx];
     if (seatCoord) {
       const side = seatCoord.side || (seatCoord.x < 540 ? 'L' : 'R');
-      const midX = side === 'L' ? 470 : 610;
+      const midX = side === 'L' ? 478 : 602;
       const midY = Math.max(1188, Math.round(seatCoord.y - 30));
       const midScale = +(0.5 * (seatCoord.scale + 1.0)).toFixed(2);
       return {
@@ -1158,8 +1207,8 @@
 
   // Tọa độ X cho 2 cột song song trên thảm đỏ, mở rộng nhẹ theo phối cảnh Chánh Điện
   const COLUMN_X = {
-    L: [475, 470, 465, 460], // Cột Trái: Hàng 1 -> Hàng 4
-    R: [605, 610, 615, 620]  // Cột Phải: Hàng 1 -> Hàng 4
+    L: [482, 480, 478, 476], // Cột Trái: Hàng 1 -> Hàng 4
+    R: [598, 600, 602, 604]  // Cột Phải: Hàng 1 -> Hàng 4
   };
 
   let ritualItemIdSeq = 0;
@@ -1659,10 +1708,27 @@
     if (hudAct) hudAct.textContent = actionLabel || 'Dâng hương';
   }
 
-  // 6. Cập nhật toàn bộ giao diện theo State từ Server
+  // 6. Cập nhật toàn bộ giao diện theo State từ Server (Tối ưu hóa: Frame-Coalescing via rAF)
   let hasInitializedRealLeader = false;
+  let pendingUIState = null;
+  let isUIStateScheduled = false;
 
   function updateUIState(st) {
+    if (!st) return;
+    pendingUIState = st;
+    if (!isUIStateScheduled) {
+      isUIStateScheduled = true;
+      requestAnimationFrame(() => {
+        isUIStateScheduled = false;
+        if (pendingUIState) {
+          executeUIStateUpdate(pendingUIState);
+          pendingUIState = null;
+        }
+      });
+    }
+  }
+
+  function executeUIStateUpdate(st) {
     if (!st) return;
 
     if (st.totalIncense != null) {
@@ -2154,7 +2220,12 @@
       : escapeHtml(String(user || 'P').charAt(0).toUpperCase());
 
     walker.innerHTML = `
-      <img src="/assets/devotee_walk.png" class="join-walker-sprite" alt="" />
+      <div class="join-walker-sprite-stack">
+        <img src="/assets/devotee_walk.png" class="jw-frame jw-frame-walk1" alt="" />
+        <img src="/assets/devotee_walk_2.png" class="jw-frame jw-frame-walk2" alt="" />
+        <img src="/assets/devotee_kneel_down.png" class="jw-frame jw-frame-kneel-down" alt="" />
+        <img src="/assets/devotee.png" class="jw-frame jw-frame-kneel" alt="" />
+      </div>
       <div class="join-walker-badge">
         <span class="join-walker-avatar">${avatarHtml}</span>
         <span class="join-walker-name">${escapeHtml(user)}</span>
@@ -2163,50 +2234,42 @@
 
     layer.appendChild(walker);
 
-    const spriteEl = walker.querySelector('.join-walker-sprite');
     const timers = [];
 
-    // Phase 1: Bước đi lên dọc thảm (10 bước × 185ms = 1850ms)
-    walker.classList.add('jw-phase-walk-up');
-    for (let i = 0; i <= 10; i++) {
-      timers.push(setTimeout(() => {
-        if (spriteEl) spriteEl.src = i % 2 === 0 ? SPRITE_FRAMES.walk1 : SPRITE_FRAMES.walk2;
-      }, i * 185));
-    }
+    // Phase 1: Bước đi lên dọc thảm (Chuyển động bước chân hoàn toàn do GPU CSS xử lý)
+    walker.classList.add('jw-phase-walk-up', 'jw-walking');
 
-    // Phase 2: Rẽ sang bên + tiếp tục bước đến đúng vị trí đệm ngồi trong sảnh (6 bước × 225ms = 1350ms)
+    // Phase 2: Rẽ sang bên + tiếp tục bước đến đúng vị trí đệm ngồi trong sảnh (1850ms)
     timers.push(setTimeout(() => {
       walker.classList.remove('jw-phase-walk-up');
       walker.classList.add('jw-phase-walk-side');
-      for (let i = 0; i <= 6; i++) {
-        timers.push(setTimeout(() => {
-          if (spriteEl) spriteEl.src = i % 2 === 0 ? SPRITE_FRAMES.walk1 : SPRITE_FRAMES.walk2;
-        }, i * 225));
-      }
     }, 1850));
 
     // Phase 3a: Hạ gối tại đúng vị trí đệm (3200ms)
     timers.push(setTimeout(() => {
-      walker.classList.remove('jw-phase-walk-side');
-      walker.classList.add('jw-phase-kneel');
-      if (spriteEl) spriteEl.src = SPRITE_FRAMES.kneelDown;
+      walker.classList.remove('jw-phase-walk-side', 'jw-walking');
+      walker.classList.add('jw-phase-kneel-down');
     }, 3200));
 
     // Phase 3b: Quỳ chắp tay an tọa vào ghế (3700ms)
     // Tịnh tiến hoàn tất -> Bàn giao vị trí chính thức cho congregationHall
     timers.push(setTimeout(() => {
-      if (spriteEl) spriteEl.src = SPRITE_FRAMES.kneel;
+      walker.classList.remove('jw-phase-kneel-down');
+      walker.classList.add('jw-phase-kneel');
       walkingViewers.delete(key);
       if (userSeatMap.has(key)) {
         settledViewers.add(key);
-        scheduleRenderCongregationHall(true);
+        renderCongregationHall([], false); // Bàn giao ngay lập tức ghế sảnh để không có khoảng trống
         setTimeout(() => {
-          const seatEl = congregationHall.querySelector(`[data-seat-idx="${targetSeatIdx}"]`);
+          const seatEl = hallSeatElements[targetSeatIdx] || congregationHall?.querySelector(`[data-seat-idx="${targetSeatIdx}"]`);
           if (seatEl) spawnCuteDevoteeBubble(seatEl, '🙏');
         }, 120);
       }
-      walker.remove();
-      if (onComplete) onComplete();
+      // Đợi 1 frame sau khi ghế trong sảnh đã hiển thị ổn định mới dọn dẹp walker
+      requestAnimationFrame(() => {
+        walker.remove();
+        if (onComplete) onComplete();
+      });
     }, 3700));
 
     walker._timers = timers;
@@ -2729,6 +2792,7 @@
     checkAndDispatchViewerQueue();
   }
   window.__handleViewerJoinWelcome = handleViewerJoinWelcome;
+  window.__enqueueJoinWalker = enqueueJoinWalker;
 
   // 8. Kết nối JSON-RPC 2.0 WebSocket & Gửi Lệnh RPC
   let ws = null;

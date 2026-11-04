@@ -19,6 +19,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  overscroll-behavior: none;
   background: #120403;
   font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--ivory);
@@ -60,6 +61,7 @@ body.obs-mode .quick-dock {
   border: 2px solid rgba(244, 193, 80, 0.55);
   background: #120403;
   contain: layout paint style;
+  touch-action: none;
 }
 
 body.obs-mode .stage-wrapper {
@@ -81,6 +83,9 @@ body.obs-mode .stage-wrapper {
   overflow: hidden;
   background: #120403;
   contain: strict;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 /* 1. HÌNH NỀN CHÁNH ĐIỆN ĐỨC PHẬT A DI ĐÀ SẮC NÉT TUYỆT ĐỐI */
@@ -93,6 +98,9 @@ body.obs-mode .stage-wrapper {
   object-position: center top;
   z-index: 1;
   pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* 1B. HỆ THỐNG HÀO QUANG ĐỨC PHẬT A DI ĐÀ — TỐI ƯU HÓA CPU (KHÔNG DÙNG FILTER:BLUR) */
@@ -105,6 +113,8 @@ body.obs-mode .stage-wrapper {
   transform: translate3d(-50%, -50%, 0);
   z-index: 4;
   pointer-events: none;
+  contain: strict;
+  will-change: transform;
   /* Khoét tâm trong suốt tại vị trí khuôn mặt Đức Phật để mặt Ngài sắc nét 100% */
   mask-image: radial-gradient(circle at 50% 50%,
       transparent 0%,
@@ -413,7 +423,6 @@ body.obs-mode .stage-wrapper {
   object-fit: contain;
   transform-origin: bottom center;
   animation: devoteeIdleSway 4.2s ease-in-out infinite;
-  will-change: transform;
 }
 
 [data-is-bowing="true"] .devotee-sprite {
@@ -421,15 +430,20 @@ body.obs-mode .stage-wrapper {
 }
 
 @keyframes devoteeIdleSway {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scaleY(1) scaleX(1) rotate(0deg);
   }
+
   28% {
     transform: translateY(-2.2px) scaleY(1.025) scaleX(0.99) rotate(0.55deg);
   }
+
   55% {
     transform: translateY(-0.8px) scaleY(1.01) scaleX(1.004) rotate(-0.45deg);
   }
+
   80% {
     transform: translateY(-1.8px) scaleY(1.018) scaleX(0.995) rotate(0.2deg);
   }
@@ -441,9 +455,9 @@ body.obs-mode .stage-wrapper {
   left: 540px;
   top: 1188px;
   transform: translate3d(-50%, -100%, 0);
-  width: 122px;
-  height: 32px;
-  border-radius: 8px;
+  width: 136px;
+  height: 35px;
+  border-radius: 9px;
   background: radial-gradient(ellipse at 50% 30%, #c62828 0%, #7f0000 70%, #4a0000 100%);
   border: 2px solid var(--gold-bright);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.9), 0 0 12px rgba(255, 215, 0, 0.45);
@@ -456,7 +470,7 @@ body.obs-mode .stage-wrapper {
 
 .altar-center-cushion::after {
   content: '🪷';
-  font-size: 15px;
+  font-size: 16px;
   filter: drop-shadow(0 0 6px #ffd700);
   opacity: 0.92;
   transform: scaleY(0.72);
@@ -466,8 +480,8 @@ body.obs-mode .stage-wrapper {
 .central-worshipper {
   position: absolute;
   left: 540px;
-  top: 1016px;
-  transform-origin: 50% 176px;
+  top: 994px;
+  transform-origin: 50% 198px;
   transform: translate3d(-50%, 0, 0);
   display: flex;
   flex-direction: column;
@@ -485,8 +499,8 @@ body.obs-mode .stage-wrapper {
 
 .central-sprite-stack {
   position: relative;
-  width: 126px;
-  height: 176px;
+  width: 142px;
+  height: 198px;
 }
 
 .pose-frame {
@@ -497,16 +511,16 @@ body.obs-mode .stage-wrapper {
   margin: 0 auto;
   transform: none !important;
   animation: none !important;
-  width: 126px;
-  height: 162px;
+  width: 142px;
+  height: 182px;
   opacity: 0;
   pointer-events: none;
 }
 
 .pose-frame[data-pose="walk1"],
 .pose-frame[data-pose="walk2"] {
-  width: 102px;
-  height: 176px;
+  width: 116px;
+  height: 198px;
 }
 
 .pose-frame.active {
@@ -515,19 +529,19 @@ body.obs-mode .stage-wrapper {
 
 .worshipper-wish-bubble {
   position: absolute;
-  bottom: calc(100% + 8px);
+  bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%) translateY(4px) scale(0.96);
-  max-width: 380px;
-  padding: 6px 16px;
+  max-width: 420px;
+  padding: 8px 18px;
   margin: 0;
-  border-radius: 14px;
-  background: rgba(18, 4, 3, 0.94);
+  border-radius: 16px;
+  background: rgba(18, 4, 3, 0.95);
   border: 1.5px solid var(--gold-main);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8), 0 0 12px rgba(244, 193, 80, 0.45);
   color: var(--gold-bright);
-  font-size: 14.5px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -549,26 +563,27 @@ body.obs-mode .stage-wrapper {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 12px 4px 5px;
+  padding: 5px 14px 5px 6px;
   border-radius: 999px;
   background: rgba(16, 6, 4, 0.94);
   border: 1.5px solid var(--gold-main);
   margin-top: -12px;
   position: relative;
   z-index: 2;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
   transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .central-name-tag {
   position: absolute;
-  bottom: calc(100% + 8px);
+  bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%) scale(1);
   margin: 0;
-  padding: 5px 15px 5px 6px;
+  padding: 6px 18px 6px 7px;
   border-width: 2px;
   border-color: var(--gold-bright);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(244, 193, 80, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8), 0 0 12px rgba(244, 193, 80, 0.45);
   white-space: nowrap;
   z-index: 25;
   transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -582,19 +597,20 @@ body.obs-mode .stage-wrapper {
 }
 
 .tag-avatar {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 1.5px solid var(--gold-bright);
+  border: 2px solid var(--gold-bright);
   background: #4f100a;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--gold-bright);
   overflow: hidden;
   flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .tag-avatar img {
@@ -603,24 +619,27 @@ body.obs-mode .stage-wrapper {
   object-fit: cover;
 }
 
-.tag-texts {
+.tag-texts,
+.tag-info {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
 }
 
 .tag-name {
-  font-size: 14.5px;
+  font-size: 16.5px;
   font-weight: 800;
   color: #ffffff;
-  max-width: 135px;
+  max-width: 160px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-.tag-sub {
-  font-size: 11.5px;
+.tag-sub,
+.tag-action {
+  font-size: 13px;
   font-weight: 700;
   color: var(--gold-bright);
 }
@@ -631,7 +650,10 @@ body.obs-mode .stage-wrapper {
   inset: 0;
   z-index: 12;
   pointer-events: none;
-  contain: layout style;
+  contain: strict;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .vip-devotee-slot {
@@ -659,7 +681,6 @@ body.obs-mode .stage-wrapper {
   white-space: nowrap;
   z-index: 5;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(4px);
 }
 
 .vip-rank-num {
@@ -689,7 +710,10 @@ body.obs-mode .stage-wrapper {
   inset: 0;
   z-index: 11;
   pointer-events: none;
-  contain: layout style;
+  contain: strict;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .hall-seat {
@@ -709,12 +733,12 @@ body.obs-mode .stage-wrapper {
 .cushion-mat {
   position: absolute;
   bottom: 0px;
-  width: 76px;
-  height: 22px;
+  width: 86px;
+  height: 25px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center, rgba(168, 42, 28, 0.85) 0%, rgba(72, 14, 10, 0.95) 75%, rgba(244, 193, 80, 0.7) 100%);
-  border: 1px solid rgba(244, 193, 80, 0.45);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45), inset 0 1px 2px rgba(255, 230, 150, 0.3);
+  border: 1px solid rgba(244, 193, 80, 0.5);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 230, 150, 0.3);
   z-index: 1;
 }
 
@@ -729,46 +753,48 @@ body.obs-mode .stage-wrapper {
 }
 
 .hall-seat .devotee-sprite {
-  width: 92px;
-  height: 120px;
+  width: 105px;
+  height: 138px;
   z-index: 2;
 }
 
 .seat-badge {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 2px 7px 2px 3px;
-  border-radius: 20px;
-  background: rgba(10, 2, 2, 0.88);
-  border: 1px solid var(--gold-main);
+  gap: 5px;
+  padding: 3px 8px 3px 4px;
+  border-radius: 999px;
+  background: rgba(12, 3, 3, 0.94);
+  border: 1.5px solid var(--gold-main);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
   order: -1;
   /* Hiển thị sát phía trên đầu nhân vật Phật tử */
-  margin-bottom: -9px;
+  margin-bottom: -10px;
   white-space: nowrap;
-  backdrop-filter: blur(4px);
   z-index: 3;
-  max-width: 110px;
+  max-width: 120px;
 }
 
 .seat-badge.default-seat-badge {
-  background: rgba(18, 5, 4, 0.85);
-  border: 1px solid rgba(244, 193, 80, 0.55);
+  background: rgba(18, 5, 4, 0.9);
+  border: 1.5px solid rgba(244, 193, 80, 0.65);
 }
 
 .seat-avatar {
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--gold-deep);
+  border: 1.5px solid var(--gold-bright);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   color: var(--gold-light);
   flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .seat-avatar img {
@@ -779,13 +805,14 @@ body.obs-mode .stage-wrapper {
 }
 
 .seat-username {
-  font-size: 10.5px;
-  font-weight: 600;
-  color: var(--gold-light);
-  text-shadow: 0 0 6px rgba(212, 160, 23, 0.8);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff9e6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 76px;
 }
 
 /* 7. NGƯỜI XEM ĐI BỘ DỌC THẢM ĐỎ LÊN DÂNG HƯƠNG (GPU TRANSFORM3D) */
@@ -801,7 +828,7 @@ body.obs-mode .stage-wrapper {
   position: absolute;
   left: 540px;
   top: 1016px;
-  transform-origin: 50% 176px;
+  transform-origin: 50% 195px;
   transform: translate3d(-50%, 0, 0);
   display: flex;
   flex-direction: column;
@@ -814,8 +841,8 @@ body.obs-mode .stage-wrapper {
 
 .ritual-queue-walker .queue-sprite-stack {
   position: relative;
-  width: 126px;
-  height: 176px;
+  width: 140px;
+  height: 195px;
 }
 
 .ritual-queue-walker .queue-pose-frame {
@@ -825,14 +852,14 @@ body.obs-mode .stage-wrapper {
   right: 0;
   margin: 0 auto;
   opacity: 0;
-  width: 126px;
-  height: 162px;
+  width: 140px;
+  height: 180px;
 }
 
 .ritual-queue-walker .queue-pose-frame[data-pose="walk1"],
 .ritual-queue-walker .queue-pose-frame[data-pose="walk2"] {
-  width: 102px;
-  height: 176px;
+  width: 114px;
+  height: 195px;
 }
 
 .ritual-queue-walker .queue-pose-frame.active {
@@ -843,7 +870,7 @@ body.obs-mode .stage-wrapper {
   position: absolute;
   bottom: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) scale(0.9);
+  transform: translateX(-50%) scale(1);
   white-space: nowrap;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
 }
@@ -862,8 +889,8 @@ body.obs-mode .stage-wrapper {
 
 .leave-walker .queue-sprite-stack {
   position: relative;
-  width: 92px;
-  height: 120px;
+  width: 105px;
+  height: 138px;
   transform-origin: 50% 100%;
 }
 
@@ -873,19 +900,19 @@ body.obs-mode .stage-wrapper {
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  width: 92px;
-  height: 120px;
+  width: 105px;
+  height: 138px;
 }
 
 .leave-walker .queue-pose-frame[data-pose="kneelDown"] {
-  width: 104px;
-  height: 135px;
+  width: 118px;
+  height: 152px;
 }
 
 .leave-walker .queue-pose-frame[data-pose="walk1"],
 .leave-walker .queue-pose-frame[data-pose="walk2"] {
-  width: 102px;
-  height: 155px;
+  width: 116px;
+  height: 172px;
 }
 
 .leave-walker .queue-pose-frame.active {
@@ -894,9 +921,9 @@ body.obs-mode .stage-wrapper {
 
 .leave-walker .queue-name-tag {
   position: absolute;
-  bottom: calc(100% + 4px);
+  bottom: calc(100% + 6px);
   left: 50%;
-  transform: translateX(-50%) scale(0.92);
+  transform: translateX(-50%) scale(1);
   white-space: nowrap;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
   z-index: 10;
@@ -914,8 +941,8 @@ body.obs-mode .stage-wrapper {
 }
 
 .carpet-walker .devotee-sprite {
-  width: 102px;
-  height: 192px;
+  width: 116px;
+  height: 212px;
   transform-origin: bottom center;
 }
 
@@ -1015,6 +1042,9 @@ body.obs-mode .stage-wrapper {
   height: 1920px;
   pointer-events: none;
   z-index: 15;
+  transform: translateZ(0);
+  will-change: contents;
+  contain: strict;
 }
 
 /* ==========================================================================
@@ -1217,7 +1247,6 @@ body.obs-mode .stage-wrapper {
   padding: 15px 18px 13px 18px;
   text-align: center;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65), 0 0 20px rgba(244, 193, 80, 0.35);
-  backdrop-filter: blur(2px);
   pointer-events: auto;
 }
 
@@ -1338,7 +1367,6 @@ body.obs-mode .stage-wrapper {
   padding: 16px 20px 14px 20px;
   text-align: center;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(244, 193, 80, 0.45);
-  backdrop-filter: blur(3px);
   pointer-events: auto;
 }
 
@@ -1625,21 +1653,24 @@ body.obs-mode .stage-wrapper {
   color: var(--muted-gold);
 }
 
-.dock-section.collapsed > *:not(.dock-section-title) {
+.dock-section.collapsed>*:not(.dock-section-title) {
   display: none !important;
 }
 
 .quick-dock::-webkit-scrollbar {
   width: 6px;
 }
+
 .quick-dock::-webkit-scrollbar-track {
   background: rgba(18, 4, 3, 0.6);
   border-radius: 8px;
 }
+
 .quick-dock::-webkit-scrollbar-thumb {
   background: rgba(244, 193, 80, 0.35);
   border-radius: 8px;
 }
+
 .quick-dock::-webkit-scrollbar-thumb:hover {
   background: rgba(244, 193, 80, 0.65);
 }
@@ -1784,8 +1815,9 @@ body.obs-mode .stage-wrapper {
   }
 }
 
-/* --- Phase 3: Hạ gối quỳ xuống (giữ đúng vị trí đích từ phase 2) --- */
-.join-walker.jw-phase-kneel {
+/* --- Phase 3: Hạ gối quỳ xuống & an tọa (giữ đúng vị trí đích từ phase 2) --- */
+.join-walker.jw-phase-kneel,
+.join-walker.jw-phase-kneel-down {
   transform:
     translate3d(calc(-50% + var(--jw-dest-x)), calc(-100% + var(--jw-dest-y)), 0) scale(var(--jw-dest-scale));
   opacity: 1;
@@ -1798,10 +1830,77 @@ body.obs-mode .stage-wrapper {
   opacity: 0 !important;
 }
 
-/* Sprite nhân vật trong walker (kích thước chuẩn, neo đáy) */
+/* Stack Sprite nhân vật trong walker — Tối ưu GPU Compositing không đổi img.src */
+.join-walker-sprite-stack {
+  position: relative;
+  width: 116px;
+  height: 198px;
+  display: block;
+}
+
+.join-walker-sprite-stack .jw-frame {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 116px;
+  height: 198px;
+  object-fit: contain;
+  object-position: bottom center;
+  transform-origin: bottom center;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Bước đi chân trái / phải luân phiên hoàn toàn bằng CSS GPU */
+.join-walker.jw-walking .jw-frame-walk1 {
+  animation: jwStepA 0.37s steps(1) infinite;
+}
+
+.join-walker.jw-walking .jw-frame-walk2 {
+  animation: jwStepB 0.37s steps(1) infinite;
+}
+
+@keyframes jwStepA {
+  0%, 49.9% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes jwStepB {
+  0%, 49.9% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+/* Phase 3a: Hạ gối */
+.join-walker.jw-phase-kneel-down .join-walker-sprite-stack,
+.join-walker.jw-phase-kneel .join-walker-sprite-stack {
+  width: 105px;
+  height: 138px;
+}
+
+.join-walker.jw-phase-kneel-down .jw-frame-kneel-down {
+  opacity: 1;
+  width: 105px;
+  height: 138px;
+}
+
+/* Phase 3b: Quỳ chắp tay */
+.join-walker.jw-phase-kneel .jw-frame-kneel {
+  opacity: 1;
+  width: 105px;
+  height: 138px;
+}
+
+.join-walker.jw-phase-kneel .join-walker-badge,
+.join-walker.jw-phase-kneel-down .join-walker-badge {
+  margin-bottom: -11px;
+}
+
+/* Tương thích ngược */
 .join-walker-sprite {
-  width: 102px;
-  height: 176px;
+  width: 116px;
+  height: 198px;
   object-fit: contain;
   object-position: bottom center;
   transform-origin: bottom center;
@@ -1809,32 +1908,32 @@ body.obs-mode .stage-wrapper {
 }
 
 .join-walker.jw-phase-kneel .join-walker-sprite {
-  width: 92px;
-  height: 120px;
+  width: 105px;
+  height: 138px;
 }
 
 .join-walker.jw-phase-kneel .join-walker-badge {
-  margin-bottom: -10px;
+  margin-bottom: -11px;
 }
 
 /* Badge tên + avatar hiển thị phía trên sprite */
 .join-walker-badge {
   display: flex;
   align-items: center;
-  gap: 5px;
-  background: rgba(10, 2, 2, 0.82);
-  border: 1px solid var(--gold-main);
-  border-radius: 20px;
-  padding: 3px 9px 3px 4px;
-  margin-bottom: 4px;
+  gap: 6px;
+  background: rgba(12, 3, 3, 0.92);
+  border: 1.5px solid var(--gold-main);
+  border-radius: 999px;
+  padding: 4px 12px 4px 5px;
+  margin-bottom: 5px;
   order: -1;
   /* Hiển thị trên sprite */
-  max-width: 140px;
+  max-width: 160px;
   white-space: nowrap;
-  backdrop-filter: blur(4px);
   animation: jwBadgePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   opacity: 0;
   animation-delay: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.75);
 }
 
 @keyframes jwBadgePop {
@@ -1850,18 +1949,20 @@ body.obs-mode .stage-wrapper {
 }
 
 .join-walker-avatar {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--gold-deep);
+  border: 1.5px solid var(--gold-bright);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   color: var(--gold-light);
   flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .join-walker-avatar img {
@@ -1872,13 +1973,13 @@ body.obs-mode .stage-wrapper {
 }
 
 .join-walker-name {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--gold-light);
-  text-shadow: 0 0 6px rgba(212, 160, 23, 0.8);
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff9e6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 6px rgba(212, 160, 23, 0.8);
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100px;
+  max-width: 115px;
 }
 
 /* ==========================================================================
@@ -1917,19 +2018,18 @@ body.obs-mode .stage-wrapper {
   border: 1.5px solid var(--gold-main);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.85), 0 0 14px rgba(244, 193, 80, 0.55);
   color: #fff9e6;
-  font-size: 12.5px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 1.35;
-  padding: 6px 13px;
+  padding: 7px 15px;
   border-radius: 14px;
   white-space: nowrap;
-  max-width: 230px;
+  max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
   pointer-events: none;
   z-index: 300;
   animation: devoteeBubblePop 3.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  backdrop-filter: blur(6px);
   user-select: none;
 }
 
@@ -1961,18 +2061,22 @@ body.obs-mode .stage-wrapper {
     opacity: 0;
     transform: translateX(-50%) translateY(10px) scale(0.4);
   }
+
   10% {
     opacity: 1;
     transform: translateX(-50%) translateY(-2px) scale(1.04);
   }
+
   16% {
     opacity: 1;
     transform: translateX(-50%) translateY(0) scale(1);
   }
+
   80% {
     opacity: 1;
     transform: translateX(-50%) translateY(0) scale(1);
   }
+
   100% {
     opacity: 0;
     transform: translateX(-50%) translateY(-14px) scale(0.88);
@@ -2002,7 +2106,7 @@ body.obs-mode .stage-wrapper {
   bottom: 88%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
   pointer-events: none;
   z-index: 150;
@@ -2016,18 +2120,22 @@ body.obs-mode .stage-wrapper {
     opacity: 0;
     transform: translateX(-50%) translateY(10px) scale(0.3) rotate(-10deg);
   }
+
   18% {
     opacity: 1;
     transform: translateX(calc(-50% + var(--bubble-drift, 0px) * 0.4)) translateY(-8px) scale(1.25) rotate(5deg);
   }
+
   35% {
     opacity: 1;
     transform: translateX(calc(-50% + var(--bubble-drift, 0px) * 0.7)) translateY(-18px) scale(1) rotate(-3deg);
   }
+
   75% {
     opacity: 0.9;
     transform: translateX(calc(-50% + var(--bubble-drift, 0px))) translateY(-38px) scale(0.95) rotate(4deg);
   }
+
   100% {
     opacity: 0;
     transform: translateX(calc(-50% + var(--bubble-drift, 0px) * 1.3)) translateY(-55px) scale(0.6) rotate(-8deg);
@@ -2041,10 +2149,23 @@ body.obs-mode .stage-wrapper {
 }
 
 @keyframes devoteeCuteNod {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(5px) rotate(1.5deg); }
-  50% { transform: translateY(1px) rotate(-1deg); }
-  75% { transform: translateY(4px) rotate(1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(5px) rotate(1.5deg);
+  }
+
+  50% {
+    transform: translateY(1px) rotate(-1deg);
+  }
+
+  75% {
+    transform: translateY(4px) rotate(1deg);
+  }
 }
 
 .hall-seat.cute-whisper-left .devotee-sprite,
@@ -2053,10 +2174,23 @@ body.obs-mode .stage-wrapper {
 }
 
 @keyframes devoteeWhisperLeft {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-3px) rotate(-4.5deg) scaleX(0.97); }
-  65% { transform: translateY(-2px) rotate(-3.5deg) scaleX(0.98); }
-  85% { transform: translateY(-0.5px) rotate(-1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-3px) rotate(-4.5deg) scaleX(0.97);
+  }
+
+  65% {
+    transform: translateY(-2px) rotate(-3.5deg) scaleX(0.98);
+  }
+
+  85% {
+    transform: translateY(-0.5px) rotate(-1deg);
+  }
 }
 
 .hall-seat.cute-whisper-right .devotee-sprite,
@@ -2065,10 +2199,23 @@ body.obs-mode .stage-wrapper {
 }
 
 @keyframes devoteeWhisperRight {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-3px) rotate(4.5deg) scaleX(0.97); }
-  65% { transform: translateY(-2px) rotate(3.5deg) scaleX(0.98); }
-  85% { transform: translateY(-0.5px) rotate(1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-3px) rotate(4.5deg) scaleX(0.97);
+  }
+
+  65% {
+    transform: translateY(-2px) rotate(3.5deg) scaleX(0.98);
+  }
+
+  85% {
+    transform: translateY(-0.5px) rotate(1deg);
+  }
 }
 
 /* Nhún nhảy đáng yêu theo nhịp gõ mõ */
@@ -2078,9 +2225,19 @@ body.obs-mode .stage-wrapper {
 }
 
 @keyframes devoteeFishBounce {
-  0%, 100% { transform: translateY(0) scale(1); }
-  35% { transform: translateY(5px) scaleY(0.94) scaleX(1.04); }
-  70% { transform: translateY(-4px) scaleY(1.05) scaleX(0.97); }
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  35% {
+    transform: translateY(5px) scaleY(0.94) scaleX(1.04);
+  }
+
+  70% {
+    transform: translateY(-4px) scaleY(1.05) scaleX(0.97);
+  }
 }
 
 /* Hoan hỷ tưng bừng khi có Đại Lễ / Dâng lễ lớn */
@@ -2091,9 +2248,57 @@ body.obs-mode .stage-wrapper {
 }
 
 @keyframes devoteeGrandRejoice {
-  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-  20% { transform: translateY(-7px) scale(1.06) rotate(-2.5deg); }
-  40% { transform: translateY(1px) scale(0.97) rotate(2.5deg); }
-  60% { transform: translateY(-6px) scale(1.04) rotate(-1.5deg); }
-  80% { transform: translateY(0px) scale(1) rotate(1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+
+  20% {
+    transform: translateY(-7px) scale(1.06) rotate(-2.5deg);
+  }
+
+  40% {
+    transform: translateY(1px) scale(0.97) rotate(2.5deg);
+  }
+
+  60% {
+    transform: translateY(-6px) scale(1.04) rotate(-1.5deg);
+  }
+
+  80% {
+    transform: translateY(0px) scale(1) rotate(1deg);
+  }
+}
+
+/* ==========================================================================
+   TỐI ƯU HÓA HIỂN THỊ TRÊN MÀN HÌNH ĐIỆN THOẠI DI ĐỘNG (MOBILE RESPONSIVE)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .app-workspace {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    overflow-y: auto;
+    height: 100vh;
+  }
+
+  .stage-wrapper {
+    height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    aspect-ratio: 9 / 16;
+    border-radius: 0;
+    border: none;
+    flex-shrink: 0;
+  }
+
+  .quick-dock {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    border: none;
+    border-top: 2px solid rgba(244, 193, 80, 0.5);
+  }
 }

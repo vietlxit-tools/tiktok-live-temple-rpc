@@ -1,17 +1,17 @@
 {
-  "totalIncense": 1869,
-  "totalMerit": 215514,
-  "woodenFishHits": 3203,
-  "bellRings": 169,
-  "lanternCount": 368,
-  "fortuneCount": 240,
-  "chantCount": 334,
-  "activeIncenseSticks": 18,
+  "totalIncense": 3282,
+  "totalMerit": 315415,
+  "woodenFishHits": 5064,
+  "bellRings": 270,
+  "lanternCount": 642,
+  "fortuneCount": 420,
+  "chantCount": 539,
+  "activeIncenseSticks": 15,
   "offerings": {
-    "lotus": 184,
+    "lotus": 332,
     "fruit": 1,
     "lamp": 1,
-    "dragon": 7
+    "dragon": 8
   },
   "devotees": {
     "Đại Thí Chủ Minh Tâm": {
@@ -28,354 +28,371 @@
       "name": "BLACK",
       "uniqueId": "black",
       "avatar": "",
-      "merit": 112718,
-      "incense": 480,
-      "gifts": 491,
-      "lastWish": "Cầu cho gia đình bình an, tài lộc hanh thông, vạn sự như ý",
-      "lastActive": 1793771068091
+      "merit": 130739,
+      "incense": 584,
+      "gifts": 541,
+      "lastWish": "Tụng kinh Chú Lăng Nghiêm",
+      "lastActive": 1793807456460
     },
     "cuong_tang_gym": {
       "name": "Tăng Khắc Cường",
       "uniqueId": "cuong_tang_gym",
       "avatar": "",
-      "merit": 341,
-      "incense": 36,
-      "gifts": 54,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1598,
+      "incense": 82,
+      "gifts": 83,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807166390
     },
     "mylinh.makeup": {
       "name": "Giang Mỹ Linh",
       "uniqueId": "mylinh.makeup",
       "avatar": "",
-      "merit": 2174,
-      "incense": 57,
-      "gifts": 31,
-      "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793771103665
+      "merit": 3176,
+      "incense": 78,
+      "gifts": 42,
+      "lastWish": "Cầu cho cuộc sống gặp nhiều may mắn, thiện duyên hội tụ",
+      "lastActive": 1793807658770
     },
     "thanhtruc.sg": {
       "name": "Ngô Thanh Trúc",
       "uniqueId": "thanhtruc.sg",
       "avatar": "",
-      "merit": 804,
-      "incense": 34,
-      "gifts": 64,
+      "merit": 1019,
+      "incense": 56,
+      "gifts": 82,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759936743
+      "lastActive": 1793807416612
     },
     "tonhu.teacher": {
       "name": "Quách Tố Như",
       "uniqueId": "tonhu.teacher",
       "avatar": "",
-      "merit": 732,
-      "incense": 25,
-      "gifts": 37,
+      "merit": 839,
+      "incense": 35,
+      "gifts": 46,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770657366
+      "lastActive": 1793807161709
     },
     "thuctrinh_zen": {
       "name": "Đặng Thục Trinh",
       "uniqueId": "thuctrinh_zen",
       "avatar": "",
-      "merit": 1157,
-      "incense": 36,
-      "gifts": 11,
+      "merit": 1349,
+      "incense": 61,
+      "gifts": 29,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759948058
+      "lastActive": 1793807459121
     },
     "camtu_flower": {
       "name": "Lưu Cẩm Tú",
       "uniqueId": "camtu_flower",
       "avatar": "",
-      "merit": 1656,
-      "incense": 34,
-      "gifts": 21,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 3142,
+      "incense": 53,
+      "gifts": 42,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807275156
     },
     "ngocanh.98": {
       "name": "Ngọc Anh Nguyễn",
       "uniqueId": "ngocanh.98",
       "avatar": "",
-      "merit": 2118,
-      "incense": 47,
-      "gifts": 40,
-      "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793767365709
+      "merit": 5530,
+      "incense": 102,
+      "gifts": 65,
+      "lastWish": "Con thành tâm cầu cho bố mẹ luôn mạnh khỏe, bình an",
+      "lastActive": 1793807573214
     },
     "bichngoc.hn": {
       "name": "Nguyễn Bích Ngọc",
       "uniqueId": "bichngoc.hn",
       "avatar": "",
-      "merit": 805,
-      "incense": 43,
-      "gifts": 37,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1052,
+      "incense": 69,
+      "gifts": 82,
+      "lastWish": "Tụng kinh Bát Nhã Tâm Kinh",
+      "lastActive": 1793807639771
     },
     "bathong_tech": {
       "name": "Huỳnh Bá Thông",
       "uniqueId": "bathong_tech",
       "avatar": "",
-      "merit": 2091,
-      "incense": 40,
-      "gifts": 67,
+      "merit": 2190,
+      "incense": 47,
+      "gifts": 85,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793767371124
+      "lastActive": 1793807154124
     },
     "camvan.singer": {
       "name": "La Cẩm Vân",
       "uniqueId": "camvan.singer",
       "avatar": "",
-      "merit": 1211,
-      "incense": 30,
-      "gifts": 56,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1774,
+      "incense": 43,
+      "gifts": 75,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807428910
     },
     "vinh_the_bui": {
       "name": "Bùi Thế Vinh",
       "uniqueId": "vinh_the_bui",
       "avatar": "",
-      "merit": 1214,
-      "incense": 31,
-      "gifts": 29,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 2783,
+      "incense": 56,
+      "gifts": 59,
+      "lastWish": "Cầu mở rộng kinh doanh, đối tác tin cậy, hợp đồng suôn sẻ",
+      "lastActive": 1793807180795
     },
     "tuyetmai.foodie": {
       "name": "Vương Tuyết Mai",
       "uniqueId": "tuyetmai.foodie",
       "avatar": "",
-      "merit": 715,
-      "incense": 27,
-      "gifts": 10,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1263,
+      "incense": 43,
+      "gifts": 20,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807158522
     },
     "ngoctram_gem": {
       "name": "Ân Ngọc Trâm",
       "uniqueId": "ngoctram_gem",
       "avatar": "",
-      "merit": 786,
-      "incense": 33,
-      "gifts": 46,
+      "merit": 1720,
+      "incense": 43,
+      "gifts": 48,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759962705
+      "lastActive": 1793807157973
     },
     "lanhuong.phuongnam": {
       "name": "Mai Lan Hương",
       "uniqueId": "lanhuong.phuongnam",
       "avatar": "",
-      "merit": 2434,
-      "incense": 35,
-      "gifts": 5,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 4005,
+      "incense": 68,
+      "gifts": 44,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807166956
     },
     "bachhop_peace": {
       "name": "Phan Bách Hợp",
       "uniqueId": "bachhop_peace",
       "avatar": "",
-      "merit": 1589,
-      "incense": 26,
-      "gifts": 21,
-      "lastWish": "Nguyện cầu cho thế giới dứt sạch dịch bệnh chiến tranh",
-      "lastActive": 1793771160786
+      "merit": 2155,
+      "incense": 43,
+      "gifts": 31,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807416424
     },
     "trong_luong_91": {
       "name": "Lương Đình Trọng",
       "uniqueId": "trong_luong_91",
       "avatar": "",
-      "merit": 2471,
-      "incense": 35,
-      "gifts": 32,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 3031,
+      "incense": 46,
+      "gifts": 42,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807171490
     },
     "minhquan_bds": {
       "name": "Trần Minh Quân",
       "uniqueId": "minhquan_bds",
       "avatar": "",
-      "merit": 1649,
-      "incense": 34,
-      "gifts": 39,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 2249,
+      "incense": 53,
+      "gifts": 58,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807417409
     },
     "tandat.logistic": {
       "name": "Nguyễn Tấn Đạt",
       "uniqueId": "tandat.logistic",
       "avatar": "",
-      "merit": 2938,
-      "incense": 44,
-      "gifts": 15,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 4073,
+      "incense": 78,
+      "gifts": 44,
+      "lastWish": "Cầu đi đường thượng lộ bình an, công việc trôi chảy",
+      "lastActive": 1793807611244
     },
     "thehao.export": {
       "name": "Nhan Thế Hào",
       "uniqueId": "thehao.export",
       "avatar": "",
-      "merit": 234,
-      "incense": 26,
-      "gifts": 27,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1233,
+      "incense": 39,
+      "gifts": 47,
+      "lastWish": "Cầu đơn hàng xuất khẩu đều đặn, buôn có bạn bán có phường",
+      "lastActive": 1793807506670
     },
     "tuankiet.design": {
       "name": "Phan Tuấn Kiệt",
       "uniqueId": "tuankiet.design",
       "avatar": "",
-      "merit": 1650,
-      "incense": 41,
-      "gifts": 39,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 2772,
+      "incense": 74,
+      "gifts": 68,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807299242
     },
     "dieuhuyen_art": {
       "name": "Vi Diệu Huyền",
       "uniqueId": "dieuhuyen_art",
       "avatar": "",
-      "merit": 498,
-      "incense": 42,
-      "gifts": 81,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1091,
+      "incense": 60,
+      "gifts": 118,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803592183
     },
     "ducduy_finance": {
       "name": "Nghiêm Đức Duy",
       "uniqueId": "ducduy_finance",
       "avatar": "",
-      "merit": 1310,
-      "incense": 45,
-      "gifts": 56,
+      "merit": 2091,
+      "incense": 83,
+      "gifts": 102,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770658534
+      "lastActive": 1793807256862
     },
     "vanhau_realestate": {
       "name": "Thái Văn Hậu",
       "uniqueId": "vanhau_realestate",
       "avatar": "",
-      "merit": 743,
-      "incense": 31,
-      "gifts": 37,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1283,
+      "incense": 43,
+      "gifts": 38,
+      "lastWish": "Cầu đất lành chim đậu, đầu tư thuận lợi, gặt hái quả ngọt",
+      "lastActive": 1793807563705
     },
     "hoanglong_sg": {
       "name": "Đinh Hoàng Long",
       "uniqueId": "hoanglong_sg",
       "avatar": "",
-      "merit": 1096,
-      "incense": 24,
-      "gifts": 29,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1637,
+      "incense": 31,
+      "gifts": 39,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807156612
     },
     "giahan.lotus": {
       "name": "Phùng Gia Hân",
       "uniqueId": "giahan.lotus",
       "avatar": "",
-      "merit": 709,
-      "incense": 20,
-      "gifts": 28,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1922,
+      "incense": 58,
+      "gifts": 75,
+      "lastWish": "Cầu cả năm may mắn, bình an khỏe mạnh, niềm vui ngập tràn",
+      "lastActive": 1793807345280
     },
     "vankhoa.dalat": {
       "name": "Mạc Văn Khoa",
       "uniqueId": "vankhoa.dalat",
       "avatar": "",
-      "merit": 728,
-      "incense": 27,
-      "gifts": 28,
-      "lastWish": "Cầu mùa màng bội thu, mưa thuận gió hòa, làm ăn sung túc",
-      "lastActive": 1793771122888
+      "merit": 1480,
+      "incense": 59,
+      "gifts": 47,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807351427
     },
     "trongnghia.ct": {
       "name": "Thân Trọng Nghĩa",
       "uniqueId": "trongnghia.ct",
       "avatar": "",
-      "merit": 2473,
-      "incense": 34,
-      "gifts": 32,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 3164,
+      "incense": 60,
+      "gifts": 60,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807429093
     },
     "myduyen.95": {
       "name": "Trương Mỹ Duyên",
       "uniqueId": "myduyen.95",
       "avatar": "",
-      "merit": 732,
-      "incense": 30,
-      "gifts": 37,
+      "merit": 2546,
+      "incense": 89,
+      "gifts": 112,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759964842
+      "lastActive": 1793807417606
     },
     "le_on_flower": {
       "name": "Ôn Thị Lệ",
       "uniqueId": "le_on_flower",
       "avatar": "",
-      "merit": 1136,
-      "incense": 29,
-      "gifts": 20,
+      "merit": 2640,
+      "incense": 53,
+      "gifts": 23,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756553017
+      "lastActive": 1793807279129
     },
     "huean_anlac": {
       "name": "Lâm Huệ An",
       "uniqueId": "huean_anlac",
       "avatar": "",
-      "merit": 2957,
-      "incense": 37,
-      "gifts": 33,
+      "merit": 4113,
+      "incense": 74,
+      "gifts": 71,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793767368990
+      "lastActive": 1793804768724
     },
     "thanhha.lotus": {
       "name": "Phạm Thanh Hà",
       "uniqueId": "thanhha.lotus",
       "avatar": "",
-      "merit": 2015,
-      "incense": 27,
-      "gifts": 31,
+      "merit": 2179,
+      "incense": 43,
+      "gifts": 58,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756551083
+      "lastActive": 1793806305834
     },
     "huuphuoc_danang": {
       "name": "Đoàn Hữu Phước",
       "uniqueId": "huuphuoc_danang",
       "avatar": "",
-      "merit": 2139,
-      "incense": 45,
-      "gifts": 40,
+      "merit": 2383,
+      "incense": 74,
+      "gifts": 67,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793767369790
+      "lastActive": 1793807279556
     },
     "bao_quoc_86": {
       "name": "Hoàng Quốc Bảo",
       "uniqueId": "bao_quoc_86",
       "avatar": "",
-      "merit": 329,
-      "incense": 36,
-      "gifts": 18,
-      "lastWish": "Cầu buôn may bán đắt, kinh doanh phát đạt, lộc tài như ý",
-      "lastActive": 1793771141874
+      "merit": 1295,
+      "incense": 48,
+      "gifts": 20,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807172090
     },
     "minhtam_tamlinh": {
       "name": "Khổng Minh Tâm",
       "uniqueId": "minhtam_tamlinh",
       "avatar": "",
-      "merit": 1235,
-      "incense": 45,
-      "gifts": 38,
-      "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793767365974
+      "merit": 2766,
+      "incense": 74,
+      "gifts": 59,
+      "lastWish": "Cầu giải trừ mọi oan trái, gia đạo an khang thịnh vượng",
+      "lastActive": 1793807421074
     },
     "maiphuong.flower": {
       "name": "Võ Mai Phương",
       "uniqueId": "maiphuong.flower",
       "avatar": "",
-      "merit": 1614,
-      "incense": 36,
-      "gifts": 39,
+      "merit": 2287,
+      "incense": 60,
+      "gifts": 58,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793767370023
+      "lastActive": 1793807630257
     },
     "thaovy_cute": {
       "name": "Đỗ Thảo Vy",
       "uniqueId": "thaovy_cute",
       "avatar": "",
-      "merit": 1549,
-      "incense": 26,
-      "gifts": 21,
+      "merit": 2098,
+      "incense": 39,
+      "gifts": 31,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759962489
+      "lastActive": 1793807417842
     },
     "Phật Tử Diệu Hạnh": {
       "name": "Phật Tử Diệu Hạnh",
@@ -444,30 +461,31 @@
       "name": "Tuệ Minh Cư Sĩ",
       "uniqueId": "tueminh_zen",
       "avatar": "",
-      "merit": 1108,
-      "incense": 22,
-      "gifts": 29,
+      "merit": 1733,
+      "incense": 44,
+      "gifts": 48,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759945005
+      "lastActive": 1793807164606
     },
     "hoangnam.dev": {
       "name": "Lê Hoàng Nam",
       "uniqueId": "hoangnam.dev",
       "avatar": "",
-      "merit": 610,
-      "incense": 12,
-      "gifts": 1,
+      "merit": 1630,
+      "incense": 25,
+      "gifts": 21,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756625100
+      "lastActive": 1793807172491
     },
     "thienthanh_blue": {
       "name": "Cổ Thiên Thanh",
       "uniqueId": "thienthanh_blue",
       "avatar": "",
-      "merit": 2598,
-      "incense": 44,
-      "gifts": 32,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 4703,
+      "incense": 88,
+      "gifts": 54,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807582712
     },
     "Minh Tuệ": {
       "name": "Minh Tuệ",
@@ -491,48 +509,51 @@
       "name": "Diệu Thảo Tâm An",
       "uniqueId": "tam_an_99",
       "avatar": "",
-      "merit": 2446,
-      "incense": 33,
-      "gifts": 5,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 2684,
+      "incense": 58,
+      "gifts": 41,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807165192
     },
     "thanhphong.vlog": {
       "name": "Chu Thanh Phong",
       "uniqueId": "thanhphong.vlog",
       "avatar": "",
-      "merit": 1178,
-      "incense": 32,
-      "gifts": 38,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1393,
+      "incense": 46,
+      "gifts": 65,
+      "lastWish": "Cầu kênh phát triển mạnh mẽ, mang lại nhiều giá trị tốt đẹp",
+      "lastActive": 1793807218834
     },
     "quangkhai.mk": {
       "name": "Trịnh Quang Khải",
       "uniqueId": "quangkhai.mk",
       "avatar": "",
-      "merit": 781,
-      "incense": 29,
-      "gifts": 37,
-      "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793767368757
+      "merit": 1751,
+      "incense": 41,
+      "gifts": 39,
+      "lastWish": "Dâng cúng Hoa Sen Vàng Tinh Khiết lên Tam Bảo",
+      "lastActive": 1793807649270
     },
     "kimchi_lotus": {
       "name": "Hồ Kim Chi",
       "uniqueId": "kimchi_lotus",
       "avatar": "",
-      "merit": 1529,
-      "incense": 27,
-      "gifts": 12,
+      "merit": 2592,
+      "incense": 49,
+      "gifts": 41,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770651352
+      "lastActive": 1793807459195
     },
     "hungdung_driver": {
       "name": "Đỗ Hùng Dũng",
       "uniqueId": "hungdung_driver",
       "avatar": "",
-      "merit": 270,
-      "incense": 27,
-      "gifts": 36,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1309,
+      "incense": 51,
+      "gifts": 56,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807157489
     },
     "Tăng Khắc Cường": {
       "name": "Tăng Khắc Cường",
@@ -547,38 +568,41 @@
       "name": "Tô Ánh Nguyệt",
       "uniqueId": "anhnguyet_yoga",
       "avatar": "",
-      "merit": 1222,
-      "incense": 36,
-      "gifts": 20,
-      "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756625580
+      "merit": 2286,
+      "incense": 56,
+      "gifts": 40,
+      "lastWish": "Tụng kinh Chú Lăng Nghiêm",
+      "lastActive": 1793807668276
     },
     "quangnhat.solar": {
       "name": "Từ Quang Nhật",
       "uniqueId": "quangnhat.solar",
       "avatar": "",
-      "merit": 725,
-      "incense": 26,
-      "gifts": 37,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1785,
+      "incense": 47,
+      "gifts": 57,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807267123
     },
     "thaonguyen.eco": {
       "name": "Bạch Thảo Nguyên",
       "uniqueId": "thaonguyen.eco",
       "avatar": "",
-      "merit": 184,
-      "incense": 17,
-      "gifts": 18,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1088,
+      "incense": 63,
+      "gifts": 73,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807416257
     },
     "hung_duong_auto": {
       "name": "Dương Văn Hùng",
       "uniqueId": "hung_duong_auto",
       "avatar": "",
-      "merit": 680,
-      "incense": 23,
-      "gifts": 37,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 2737,
+      "incense": 64,
+      "gifts": 68,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807272090
     },
     "Nghiêm Đức Duy": {
       "name": "Nghiêm Đức Duy",
@@ -593,459 +617,481 @@
       "name": "Tào Thục Uyên",
       "uniqueId": "thucuyen_spa",
       "avatar": "",
-      "merit": 770,
-      "incense": 36,
-      "gifts": 10,
+      "merit": 811,
+      "incense": 39,
+      "gifts": 19,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759945555
+      "lastActive": 1793807449589
     },
     "dieulinh_buddhism": {
       "name": "Hà Diệu Linh",
       "uniqueId": "dieulinh_buddhism",
       "avatar": "",
-      "merit": 294,
-      "incense": 24,
-      "gifts": 27,
-      "lastWish": "Cầu ánh sáng từ bi Phật Tổ che chở cho đàn con cháu",
-      "lastActive": 1793771074390
+      "merit": 550,
+      "incense": 54,
+      "gifts": 63,
+      "lastWish": "Xin xăm Quẻ số 52 Thượng Cát",
+      "lastActive": 1793807430579
     },
     "hongnhung_tea": {
       "name": "Diệp Hồng Nhung",
       "uniqueId": "hongnhung_tea",
       "avatar": "",
-      "merit": 575,
-      "incense": 18,
-      "gifts": 10,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 665,
+      "incense": 28,
+      "gifts": 19,
+      "lastWish": "Tụng kinh Chú Vãng Sanh",
+      "lastActive": 1793807544696
     },
     "ducthinh88": {
       "name": "Vũ Đức Thịnh",
       "uniqueId": "ducthinh88",
       "avatar": "",
-      "merit": 2048,
-      "incense": 34,
-      "gifts": 40,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 3059,
+      "incense": 47,
+      "gifts": 60,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807601748
     },
     "kimngan_fengshui": {
       "name": "Lý Kim Ngân",
       "uniqueId": "kimngan_fengshui",
       "avatar": "",
-      "merit": 1617,
-      "incense": 40,
-      "gifts": 30,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 2200,
+      "incense": 59,
+      "gifts": 31,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807418790
     },
     "triet_lawyer": {
       "name": "Tạ Minh Triết",
       "uniqueId": "triet_lawyer",
       "avatar": "",
-      "merit": 1092,
-      "incense": 24,
-      "gifts": 29,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1231,
+      "incense": 39,
+      "gifts": 38,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807172875
     },
     "vinhtien.farm": {
       "name": "Kha Vĩnh Tiến",
       "uniqueId": "vinhtien.farm",
       "avatar": "",
-      "merit": 1593,
-      "incense": 36,
-      "gifts": 30,
+      "merit": 2400,
+      "incense": 74,
+      "gifts": 85,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756626464
+      "lastActive": 1793807440345
     },
     "khang_chau_89": {
       "name": "Châu Vĩnh Khang",
       "uniqueId": "khang_chau_89",
       "avatar": "",
-      "merit": 236,
-      "incense": 27,
-      "gifts": 27,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 781,
+      "incense": 41,
+      "gifts": 37,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807620748
     },
     "hanhnguyen.an": {
       "name": "Hạnh Nguyện An",
       "uniqueId": "hanhnguyen.an",
       "avatar": "",
-      "merit": 587,
-      "incense": 17,
+      "merit": 681,
+      "incense": 24,
       "gifts": 1,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759937722
+      "lastActive": 1793807440574
     },
     "annhien.chuc": {
       "name": "Chúc An Nhiên",
       "uniqueId": "annhien.chuc",
       "avatar": "",
-      "merit": 658,
-      "incense": 21,
-      "gifts": 37,
-      "lastWish": "Cầu bình an may mắn đến với người thân yêu"
+      "merit": 1273,
+      "incense": 42,
+      "gifts": 56,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807168859
     },
     "lieutri.dat": {
       "name": "Liễu Tri Đạt",
       "uniqueId": "lieutri.dat",
       "avatar": "",
-      "merit": 996,
-      "incense": 12,
-      "gifts": 11,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1219,
+      "incense": 40,
+      "gifts": 29,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807166775
     },
     "batnha.thuyen": {
       "name": "Bát Nhã Thuyền",
       "uniqueId": "batnha.thuyen",
       "avatar": "",
-      "merit": 137,
-      "incense": 10,
-      "gifts": 18,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 191,
+      "incense": 16,
+      "gifts": 27,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807168492
     },
     "tinhtam.tuvi": {
       "name": "Thích Tịnh Tâm",
       "uniqueId": "tinhtam.tuvi",
       "avatar": "",
-      "merit": 95,
-      "incense": 5,
+      "merit": 198,
+      "incense": 21,
       "gifts": 0,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756627114
+      "lastActive": 1793807592221
     },
     "phaphoa.duyen": {
       "name": "Pháp Hoa Duyên",
       "uniqueId": "phaphoa.duyen",
       "avatar": "",
-      "merit": 239,
-      "incense": 30,
-      "gifts": 18,
+      "merit": 2933,
+      "incense": 93,
+      "gifts": 86,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759945371
+      "lastActive": 1793805094658
     },
     "vanhanh.thien": {
       "name": "Vạn Hạnh Thiền",
       "uniqueId": "vanhanh.thien",
       "avatar": "",
-      "merit": 1103,
-      "incense": 25,
-      "gifts": 20,
+      "merit": 2130,
+      "incense": 46,
+      "gifts": 31,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770660033
+      "lastActive": 1793807458977
     },
     "nhuy.cat": {
       "name": "Như Ý Cát",
       "uniqueId": "nhuy.cat",
       "avatar": "",
-      "merit": 585,
-      "incense": 9,
-      "gifts": 1,
+      "merit": 2172,
+      "incense": 40,
+      "gifts": 22,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770660203
+      "lastActive": 1793807169974
     },
     "dieuam.sg": {
       "name": "Diệu Âm Cư Sĩ",
       "uniqueId": "dieuam.sg",
       "avatar": "",
-      "merit": 1920,
-      "incense": 23,
-      "gifts": 13,
+      "merit": 2531,
+      "incense": 38,
+      "gifts": 32,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759937539
+      "lastActive": 1793807169608
     },
     "bodetam.vn": {
       "name": "Bồ Đề Tâm",
       "uniqueId": "bodetam.vn",
       "avatar": "",
-      "merit": 619,
-      "incense": 17,
-      "gifts": 10,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1098,
+      "incense": 22,
+      "gifts": 11,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793804766127
     },
     "anlac.peace": {
       "name": "An Lạc Cư Sĩ",
       "uniqueId": "anlac.peace",
       "avatar": "",
-      "merit": 656,
-      "incense": 27,
-      "gifts": 10,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1717,
+      "incense": 48,
+      "gifts": 21,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807279344
     },
     "nhatquang.minh": {
       "name": "Nhật Quang Minh",
       "uniqueId": "nhatquang.minh",
       "avatar": "",
-      "merit": 599,
-      "incense": 18,
+      "merit": 626,
+      "incense": 21,
       "gifts": 19,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793767371327
+      "lastActive": 1793807418591
     },
     "tinhdo.tam": {
       "name": "Tịnh Độ Tâm",
       "uniqueId": "tinhdo.tam",
       "avatar": "",
-      "merit": 986,
-      "incense": 14,
-      "gifts": 11,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1981,
+      "incense": 30,
+      "gifts": 13,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807335811
     },
     "quangtri.dung": {
       "name": "Quảng Trí Dũng",
       "uniqueId": "quangtri.dung",
       "avatar": "",
-      "merit": 256,
-      "incense": 22,
-      "gifts": 45,
+      "merit": 1008,
+      "incense": 55,
+      "gifts": 73,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793771113258
+      "lastActive": 1793807276894
     },
     "quangduc.hoa": {
       "name": "Quảng Đức Hòa",
       "uniqueId": "quangduc.hoa",
       "avatar": "",
-      "merit": 1045,
-      "incense": 18,
-      "gifts": 20,
+      "merit": 1646,
+      "incense": 32,
+      "gifts": 48,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770658721
+      "lastActive": 1793807260939
     },
     "nguyettinh.khong": {
       "name": "Nguyệt Tịnh Không",
       "uniqueId": "nguyettinh.khong",
       "avatar": "",
-      "merit": 1084,
-      "incense": 23,
-      "gifts": 29,
+      "merit": 1667,
+      "incense": 44,
+      "gifts": 39,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756552848
+      "lastActive": 1793807535222
     },
     "tuyduyen.khoi": {
       "name": "Tùy Duyên Khởi",
       "uniqueId": "tuyduyen.khoi",
       "avatar": "",
-      "merit": 1540,
-      "incense": 27,
-      "gifts": 21,
-      "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756620247
+      "merit": 3666,
+      "incense": 67,
+      "gifts": 70,
+      "lastWish": "Dâng cúng Hoa Sen Vàng Tinh Khiết lên Tam Bảo",
+      "lastActive": 1793807341271
     },
     "langnghiem.dinh": {
       "name": "Lăng Nghiêm Định",
       "uniqueId": "langnghiem.dinh",
       "avatar": "",
-      "merit": 1050,
-      "incense": 16,
-      "gifts": 11,
-      "lastWish": "Tụng kinh Bát Nhã Tâm Kinh",
-      "lastActive": 1793771132534
+      "merit": 4084,
+      "incense": 70,
+      "gifts": 71,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807155555
     },
     "dieuhanh.lotus": {
       "name": "Diệu Hạnh Hoa",
       "uniqueId": "dieuhanh.lotus",
       "avatar": "",
-      "merit": 112,
-      "incense": 11,
-      "gifts": 0,
-      "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770660400
+      "merit": 2111,
+      "incense": 50,
+      "gifts": 22,
+      "lastWish": "Dâng cúng Hoa Sen Vàng Tinh Khiết lên Tam Bảo",
+      "lastActive": 1793807468626
     },
     "vanthu.hoa": {
       "name": "Văn Thù Hoa",
       "uniqueId": "vanthu.hoa",
       "avatar": "",
-      "merit": 1026,
-      "incense": 17,
-      "gifts": 2,
+      "merit": 2622,
+      "incense": 49,
+      "gifts": 41,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770657155
+      "lastActive": 1793807159759
     },
     "vongai.tri": {
       "name": "Vô Ngại Trí",
       "uniqueId": "vongai.tri",
       "avatar": "",
-      "merit": 548,
-      "incense": 13,
-      "gifts": 10,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1151,
+      "incense": 31,
+      "gifts": 29,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807476797
     },
     "kimcuong.tang": {
       "name": "Kim Cương Tạng",
       "uniqueId": "kimcuong.tang",
       "avatar": "",
-      "merit": 666,
-      "incense": 23,
-      "gifts": 19,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1645,
+      "incense": 35,
+      "gifts": 30,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807164006
     },
     "viennhu.zen": {
       "name": "Viên Như Tâm",
       "uniqueId": "viennhu.zen",
       "avatar": "",
-      "merit": 1080,
-      "incense": 28,
-      "gifts": 20,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1694,
+      "incense": 52,
+      "gifts": 30,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807362226
     },
     "phuctri.vien": {
       "name": "Phúc Trí Viên",
       "uniqueId": "phuctri.vien",
       "avatar": "",
-      "merit": 1626,
-      "incense": 35,
-      "gifts": 57,
-      "lastWish": "Dâng cúng Hoa Sen Vàng Tinh Khiết lên Tam Bảo"
+      "merit": 2216,
+      "incense": 52,
+      "gifts": 58,
+      "lastWish": "Cầu phúc trí tròn đầy, gia đình viên mãn ấm êm",
+      "lastActive": 1793807440085
     },
     "vienthong.giac": {
       "name": "Viên Thông Giác",
       "uniqueId": "vienthong.giac",
       "avatar": "",
-      "merit": 111,
-      "incense": 10,
-      "gifts": 18,
+      "merit": 285,
+      "incense": 23,
+      "gifts": 36,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756553731
+      "lastActive": 1793804764009
     },
     "voluongquang.vn": {
       "name": "Vô Lượng Quang",
       "uniqueId": "voluongquang.vn",
       "avatar": "",
-      "merit": 213,
-      "incense": 24,
-      "gifts": 18,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 331,
+      "incense": 40,
+      "gifts": 27,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807261140
     },
     "huequang.zen": {
       "name": "Huệ Quang Minh",
       "uniqueId": "huequang.zen",
       "avatar": "",
-      "merit": 609,
-      "incense": 14,
-      "gifts": 19,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1541,
+      "incense": 21,
+      "gifts": 21,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807415202
     },
     "daitri.hue": {
       "name": "Đại Trí Huệ",
       "uniqueId": "daitri.hue",
       "avatar": "",
-      "merit": 571,
-      "incense": 14,
-      "gifts": 19,
+      "merit": 2085,
+      "incense": 38,
+      "gifts": 31,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759946888
+      "lastActive": 1793807164208
     },
     "chanthienmy.hn": {
       "name": "Chân Thiện Mỹ",
       "uniqueId": "chanthienmy.hn",
       "avatar": "",
-      "merit": 711,
-      "incense": 25,
-      "gifts": 19,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1421,
+      "incense": 59,
+      "gifts": 20,
+      "lastWish": "Cầu hướng về chân thiện mỹ, tâm hồn thanh tao",
+      "lastActive": 1793807497158
     },
     "minhdinh.phap": {
       "name": "Minh Định Pháp",
       "uniqueId": "minhdinh.phap",
       "avatar": "",
-      "merit": 203,
-      "incense": 22,
-      "gifts": 9,
+      "merit": 376,
+      "incense": 38,
+      "gifts": 27,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770656983
+      "lastActive": 1793807417190
     },
     "baotich.kinh": {
       "name": "Bảo Tích Kinh",
       "uniqueId": "baotich.kinh",
       "avatar": "",
-      "merit": 1992,
-      "incense": 29,
-      "gifts": 22,
+      "merit": 3130,
+      "incense": 55,
+      "gifts": 69,
       "lastWish": "Cầu tích đức bồi công, phúc báo cho con cháu",
-      "lastActive": 1793771083893
+      "lastActive": 1793807478131
     },
     "cattuong.nhu": {
       "name": "Cát Tường Như",
       "uniqueId": "cattuong.nhu",
       "avatar": "",
-      "merit": 608,
-      "incense": 16,
-      "gifts": 10,
-      "lastWish": "Cầu bốn mùa cát tường, tám tiết bình an thịnh vượng",
-      "lastActive": 1793771093411
+      "merit": 734,
+      "incense": 30,
+      "gifts": 19,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807168123
     },
     "tridung.tuong": {
       "name": "Trí Dũng Tướng",
       "uniqueId": "tridung.tuong",
       "avatar": "",
-      "merit": 1175,
-      "incense": 37,
-      "gifts": 38,
+      "merit": 2346,
+      "incense": 80,
+      "gifts": 49,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793759965739
+      "lastActive": 1793807418040
     },
     "quantutai.zen": {
       "name": "Quán Tự Tại",
       "uniqueId": "quantutai.zen",
       "avatar": "",
-      "merit": 200,
-      "incense": 21,
-      "gifts": 9,
-      "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793756625723
+      "merit": 1739,
+      "incense": 51,
+      "gifts": 21,
+      "lastWish": "Quán chiếu tự tại, nhìn thấu sự đời bao dung",
+      "lastActive": 1793807354803
     },
     "thiennhan.tam": {
       "name": "Thiện Nhân Tâm",
       "uniqueId": "thiennhan.tam",
       "avatar": "",
-      "merit": 119,
-      "incense": 11,
-      "gifts": 9,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 674,
+      "incense": 30,
+      "gifts": 10,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807161906
     },
     "hoanghiem.tam": {
       "name": "Hoa Nghiêm Tâm",
       "uniqueId": "hoanghiem.tam",
       "avatar": "",
-      "merit": 188,
-      "incense": 16,
-      "gifts": 9,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1220,
+      "incense": 37,
+      "gifts": 29,
+      "lastWish": "Nguyện thế giới hoa nghiêm, muôn loài sống thái bình",
+      "lastActive": 1793807554179
     },
     "phohien.tam": {
       "name": "Phổ Hiền Tâm",
       "uniqueId": "phohien.tam",
       "avatar": "",
-      "merit": 1035,
-      "incense": 15,
-      "gifts": 20,
+      "merit": 1140,
+      "incense": 24,
+      "gifts": 38,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793771151288
+      "lastActive": 1793807158322
     },
     "phapbao.lam": {
       "name": "Pháp Bảo Lâm",
       "uniqueId": "phapbao.lam",
       "avatar": "",
-      "merit": 608,
-      "incense": 17,
-      "gifts": 19,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1137,
+      "incense": 24,
+      "gifts": 29,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793804892541
     },
     "tuedang.zen": {
       "name": "Tuệ Đăng Cư Sĩ",
       "uniqueId": "tuedang.zen",
       "avatar": "",
-      "merit": 1180,
-      "incense": 32,
-      "gifts": 38,
-      "lastWish": "Đã vào Chánh Điện lễ Phật"
+      "merit": 1728,
+      "incense": 46,
+      "gifts": 39,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793807277109
     },
     "thanhtinh.truc": {
       "name": "Thanh Tịnh Trúc",
       "uniqueId": "thanhtinh.truc",
       "avatar": "",
-      "merit": 1032,
-      "incense": 19,
-      "gifts": 11,
+      "merit": 1723,
+      "incense": 52,
+      "gifts": 39,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
-      "lastActive": 1793770659850
+      "lastActive": 1793807271176
     },
     "Thí Chủ Tuệ Tâm": {
       "name": "Thí Chủ Tuệ Tâm",
@@ -1666,6 +1712,506 @@
       "gifts": 0,
       "lastWish": "Đã vào Chánh Điện lễ Phật",
       "lastActive": 1793771095635
+    },
+    "annhien.chuc_192": {
+      "name": "Chúc An Nhiên 192",
+      "uniqueId": "annhien.chuc_192",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800006719
+    },
+    "triet_lawyer_843": {
+      "name": "Tạ Minh Triết 843",
+      "uniqueId": "triet_lawyer_843",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800006773
+    },
+    "thienthanh_blue_387": {
+      "name": "Cổ Thiên Thanh 387",
+      "uniqueId": "thienthanh_blue_387",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800007159
+    },
+    "dieuhanh.lotus_876": {
+      "name": "Diệu Hạnh Hoa 876",
+      "uniqueId": "dieuhanh.lotus_876",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800007254
+    },
+    "thienthanh_blue_890": {
+      "name": "Cổ Thiên Thanh 890",
+      "uniqueId": "thienthanh_blue_890",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800007256
+    },
+    "vinh_the_bui_732": {
+      "name": "Bùi Thế Vinh 732",
+      "uniqueId": "vinh_the_bui_732",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800007685
+    },
+    "ngoctram_gem_185": {
+      "name": "Ân Ngọc Trâm 185",
+      "uniqueId": "ngoctram_gem_185",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800008225
+    },
+    "vongai.tri_507": {
+      "name": "Vô Ngại Trí 507",
+      "uniqueId": "vongai.tri_507",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800008233
+    },
+    "lanhuong.phuongnam_298": {
+      "name": "Mai Lan Hương 298",
+      "uniqueId": "lanhuong.phuongnam_298",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800008244
+    },
+    "huuphuoc_danang_618": {
+      "name": "Đoàn Hữu Phước 618",
+      "uniqueId": "huuphuoc_danang_618",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800008394
+    },
+    "trong_luong_91_554": {
+      "name": "Lương Đình Trọng 554",
+      "uniqueId": "trong_luong_91_554",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800009565
+    },
+    "triet_lawyer_786": {
+      "name": "Tạ Minh Triết 786",
+      "uniqueId": "triet_lawyer_786",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800010031
+    },
+    "anlac.peace_589": {
+      "name": "An Lạc Cư Sĩ 589",
+      "uniqueId": "anlac.peace_589",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800010061
+    },
+    "mylinh.makeup_491": {
+      "name": "Giang Mỹ Linh 491",
+      "uniqueId": "mylinh.makeup_491",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800010184
+    },
+    "thaovy_cute_245": {
+      "name": "Đỗ Thảo Vy 245",
+      "uniqueId": "thaovy_cute_245",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800010292
+    },
+    "trong_luong_91_620": {
+      "name": "Lương Đình Trọng 620",
+      "uniqueId": "trong_luong_91_620",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800010468
+    },
+    "dieuhanh.lotus_613": {
+      "name": "Diệu Hạnh Hoa 613",
+      "uniqueId": "dieuhanh.lotus_613",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800011375
+    },
+    "quantutai.zen_945": {
+      "name": "Quán Tự Tại 945",
+      "uniqueId": "quantutai.zen_945",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800012174
+    },
+    "ducthinh88_141": {
+      "name": "Vũ Đức Thịnh 141",
+      "uniqueId": "ducthinh88_141",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800012266
+    },
+    "tonhu.teacher_693": {
+      "name": "Quách Tố Như 693",
+      "uniqueId": "tonhu.teacher_693",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800012298
+    },
+    "tuedang.zen_968": {
+      "name": "Tuệ Đăng Cư Sĩ 968",
+      "uniqueId": "tuedang.zen_968",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800012698
+    },
+    "tinhdo.tam_517": {
+      "name": "Tịnh Độ Tâm 517",
+      "uniqueId": "tinhdo.tam_517",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800012938
+    },
+    "hoanglong_sg_322": {
+      "name": "Đinh Hoàng Long 322",
+      "uniqueId": "hoanglong_sg_322",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800013099
+    },
+    "vinh_the_bui_200": {
+      "name": "Bùi Thế Vinh 200",
+      "uniqueId": "vinh_the_bui_200",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800013361
+    },
+    "vankhoa.dalat_129": {
+      "name": "Mạc Văn Khoa 129",
+      "uniqueId": "vankhoa.dalat_129",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793800013813
+    },
+    "ducthinh88_894": {
+      "name": "Vũ Đức Thịnh 894",
+      "uniqueId": "ducthinh88_894",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803596783
+    },
+    "huequang.zen_948": {
+      "name": "Huệ Quang Minh 948",
+      "uniqueId": "huequang.zen_948",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803596985
+    },
+    "dieuam.sg_843": {
+      "name": "Diệu Âm Cư Sĩ 843",
+      "uniqueId": "dieuam.sg_843",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803597183
+    },
+    "huean_anlac_795": {
+      "name": "Lâm Huệ An 795",
+      "uniqueId": "huean_anlac_795",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803597702
+    },
+    "hungdung_driver_402": {
+      "name": "Đỗ Hùng Dũng 402",
+      "uniqueId": "hungdung_driver_402",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803597924
+    },
+    "thanhphong.vlog_103": {
+      "name": "Chu Thanh Phong 103",
+      "uniqueId": "thanhphong.vlog_103",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803598100
+    },
+    "thiennhan.tam_740": {
+      "name": "Thiện Nhân Tâm 740",
+      "uniqueId": "thiennhan.tam_740",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803598350
+    },
+    "phohien.tam_521": {
+      "name": "Phổ Hiền Tâm 521",
+      "uniqueId": "phohien.tam_521",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803598566
+    },
+    "tam_an_99_871": {
+      "name": "Diệu Thảo Tâm An 871",
+      "uniqueId": "tam_an_99_871",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803599851
+    },
+    "thanhha.lotus_519": {
+      "name": "Phạm Thanh Hà 519",
+      "uniqueId": "thanhha.lotus_519",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803600041
+    },
+    "bao_quoc_86_218": {
+      "name": "Hoàng Quốc Bảo 218",
+      "uniqueId": "bao_quoc_86_218",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803600250
+    },
+    "cuong_tang_gym_460": {
+      "name": "Tăng Khắc Cường 460",
+      "uniqueId": "cuong_tang_gym_460",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803600468
+    },
+    "batnha.thuyen_580": {
+      "name": "Bát Nhã Thuyền 580",
+      "uniqueId": "batnha.thuyen_580",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803601139
+    },
+    "baotich.kinh_585": {
+      "name": "Bảo Tích Kinh 585",
+      "uniqueId": "baotich.kinh_585",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803601334
+    },
+    "huequang.zen_165": {
+      "name": "Huệ Quang Minh 165",
+      "uniqueId": "huequang.zen_165",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803601540
+    },
+    "minhquan_bds_490": {
+      "name": "Trần Minh Quân 490",
+      "uniqueId": "minhquan_bds_490",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803601772
+    },
+    "trongnghia.ct_297": {
+      "name": "Thân Trọng Nghĩa 297",
+      "uniqueId": "trongnghia.ct_297",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803601968
+    },
+    "mylinh.makeup_364": {
+      "name": "Giang Mỹ Linh 364",
+      "uniqueId": "mylinh.makeup_364",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803602202
+    },
+    "tinhdo.tam_847": {
+      "name": "Tịnh Độ Tâm 847",
+      "uniqueId": "tinhdo.tam_847",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803602433
+    },
+    "ngocanh.98_100": {
+      "name": "Ngọc Anh Nguyễn 100",
+      "uniqueId": "ngocanh.98_100",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803602651
+    },
+    "tueminh_zen_384": {
+      "name": "Tuệ Minh Cư Sĩ 384",
+      "uniqueId": "tueminh_zen_384",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803602867
+    },
+    "trongnghia.ct_566": {
+      "name": "Thân Trọng Nghĩa 566",
+      "uniqueId": "trongnghia.ct_566",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803603068
+    },
+    "anhnguyet_yoga_105": {
+      "name": "Tô Ánh Nguyệt 105",
+      "uniqueId": "anhnguyet_yoga_105",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803603288
+    },
+    "hongnhung_tea_556": {
+      "name": "Diệp Hồng Nhung 556",
+      "uniqueId": "hongnhung_tea_556",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803603499
+    },
+    "minhtam_tamlinh_594": {
+      "name": "Khổng Minh Tâm 594",
+      "uniqueId": "minhtam_tamlinh_594",
+      "avatar": "",
+      "merit": 1,
+      "incense": 0,
+      "gifts": 0,
+      "lastWish": "Đã vào Chánh Điện lễ Phật",
+      "lastActive": 1793803604152
     }
   },
   "settings": {
@@ -1676,8 +2222,8 @@
     "smokeDensity": 1,
     "autoSim": true,
     "autoSimIntervalMs": 9500,
-    "musicVolume": 0.23,
+    "musicVolume": 0.46,
     "ttsVolume": 0.94,
-    "sutraVolume": 0.23
+    "sutraVolume": 0.46
   }
 }
