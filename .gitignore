@@ -1,13 +1,16 @@
-# Dependencies & Package Managers
+# ============================================================================
+# .gitignore: Chùa Linh Ứng Online — TikTok Live RPC
+# Chỉ bỏ qua các file rác, bộ nhớ đệm runtime, secrets và dependencies
+# ============================================================================
+
+# 1. Dependencies & Package Managers
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-bun.lock
-bun.lockb
 
-# Python & Virtual Environments
+# 2. Python Environments, Bytecode & Testing
 __pycache__/
 *.py[cod]
 *$py.class
@@ -19,32 +22,16 @@ dist/
 build/
 .pytest_cache/
 
-# Machine Learning Models & Large Weights
-models/
-*.onnx
-*.pt
-*.pth
-*.bin
-*.safetensors
-
-# Runtime Caches & Logs
+# 3. Runtime Caches, Model Download Cache & Logs
 data/tts-cache/
+data/.hf_cache/
+models/**/.cache/
 *.log
 logs/
+*.lock
+!package-lock.json
 
-# Large Audio & Media Assets
-*.m4a
-*.mp3
-*.wav
-*.ogg
-*.flac
-*.aac
-
-# Allow all assets under public/assets
-!public/assets/
-!public/assets/**
-
-# Environment Variables & Secrets
+# 4. Environment Variables & Secrets
 .env
 .env*.local
 .env.production
@@ -52,7 +39,7 @@ logs/
 *.env
 !.env.example
 
-# Operating System & IDE Files
+# 5. Operating System & IDE Files
 .DS_Store
 .DS_Store?
 ._*
@@ -64,7 +51,7 @@ desktop.ini
 *.swo
 *~
 
-# AI Agent, MCP & Analysis Cache
+# 6. AI Agent, MCP & Analysis Cache
 .gemini/
 .playwright-mcp/
 scratch/
