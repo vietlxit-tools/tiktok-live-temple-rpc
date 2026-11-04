@@ -39,9 +39,10 @@ logs/
 *.ogg
 *.flac
 *.aac
-public/assets/*.mp3
-public/assets/*.m4a
-public/assets/*.wav
+
+# Allow all assets under public/assets
+!public/assets/
+!public/assets/**
 
 # Environment Variables & Secrets
 .env
