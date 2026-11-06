@@ -16,6 +16,14 @@ import traceback
 import unicodedata
 from pathlib import Path
 
+if sys.platform == "win32":
+    try:
+        sys.stdin.reconfigure(encoding="utf-8")
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 os.environ.setdefault("OMP_NUM_THREADS", "4")
 os.environ.setdefault("OMP_WAIT_POLICY", "PASSIVE")
 os.environ.setdefault("MKL_NUM_THREADS", "4")

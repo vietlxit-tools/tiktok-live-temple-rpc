@@ -3,7 +3,7 @@ const compression = require('compression');
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
-const { spawn } = require('child_process');
+const { spawn, spawnSync } = require('child_process');
 const cors = require('cors');
 const { WebSocketServer } = require('ws');
 const { TikTokLiveConnection, WebcastEvent, ControlEvent } = require('tiktok-live-connector');
@@ -312,8 +312,30 @@ class ZeroTTSManager {
       path.join(__dirname, '.venv', 'Scripts', 'python.exe'), // Windows venv
       path.join(__dirname, '.venv', 'bin', 'python'),        // Linux / macOS venv
       process.env.PYTHON_PATH,
+      process.platform === 'win32' ? 'python' : 'python3',
+      'python',
+      'python3'
     ].filter(Boolean);
 
+    // 1. Ưu tiên binary hợp lệ đã cài đặt đầy đủ gói zerotts
+    for (const bin of candidates) {
+      if (fs.existsSync(bin)) {
+        try {
+          const testProc = spawnSync(bin, ['-c', 'import zerotts'], { timeout: 3500 });
+          if (testProc.status === 0) return bin;
+        } catch (_) {}
+      }
+    }
+
+    // 2. Thử gọi trực tiếp từ PATH hệ thống nếu binary trong candidates chưa kiểm tra được
+    for (const cmd of [process.platform === 'win32' ? 'python' : 'python3', 'python', 'python3']) {
+      try {
+        const testProc = spawnSync(cmd, ['-c', 'import zerotts'], { timeout: 3500 });
+        if (testProc.status === 0) return cmd;
+      } catch (_) {}
+    }
+
+    // 3. Fallback an toàn nếu chưa kiểm tra được
     for (const bin of candidates) {
       if (fs.existsSync(bin)) return bin;
     }
@@ -328,7 +350,12 @@ class ZeroTTSManager {
     this.status = 'loading';
     this.proc = spawn(pyBin, [scriptPath], {
       cwd: __dirname,
-      stdio: ['pipe', 'pipe', 'pipe']
+      stdio: ['pipe', 'pipe', 'pipe'],
+      env: {
+        ...process.env,
+        PYTHONUTF8: '1',
+        PYTHONIOENCODING: 'utf-8'
+      }
     });
 
     this.proc.stdout.on('data', (chunk) => {
